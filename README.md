@@ -13,7 +13,7 @@ Release branch: Once development branch gather enough features, it will be fast-
 
 Master branch: If end-to-end testing and acceptance test pass, it will be fast-forward merged to this branch. The production code is in here. 
 
-#Before Coding or upon approved pull request
+## Before Coding or upon approved pull request
 
 If there are new coming approved pull requests, get feature branch updated:
 1) git checkout master and git pull origin master to pull the code from master branch of the remote repo to the master branch of local repo
