@@ -111,4 +111,4 @@ Rebase is for combining private branches, not for public one.
 
 In rebase, no extra commits are created, but the exiting commits that you created are moved.
 
-You can find that the commits has changed the hash because the timeline is changed, the hash has to be recalculated.
+In rebase you can find that the commits has changed the hash because the timeline is changed, the hash has to be recalculated.
