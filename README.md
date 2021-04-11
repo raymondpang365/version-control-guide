@@ -30,6 +30,8 @@ git merge develop
 
 git push
 
+
+
 This is very important. Otherwise, when somebody pushed new commit to the remote repository, the local repo would not be in sync with the remote repo. If new changes are made in working directory without keeping it updated first, conflicts easily occur.
 
 **Advanced:**
@@ -101,13 +103,7 @@ Rebase does not preserve branches tree like a **cutting a branch with a scissor 
 
 Rebase is for combining private branches, not for public one.
 
-![](RackMultipart20210411-4-18zohr_html_4bb265d20787a9aa.gif)
-
-![](RackMultipart20210411-4-18zohr_html_48a92eff6b6b2cbc.gif) ![](RackMultipart20210411-4-18zohr_html_7d08db99e12cef45.gif) ![](RackMultipart20210411-4-18zohr_html_80c8c01d330f43eb.gif) ![](RackMultipart20210411-4-18zohr_html_88c9e44f08876be9.gif)
-
-![](RackMultipart20210411-4-18zohr_html_975ac3674c428fc6.gif)
-
-![](RackMultipart20210411-4-18zohr_html_f0c194f27df1c3c7.gif)
+<img src="https://github.com/psfr937/version-control-guide/blob/master/merge_and_rebase_illustration.jpg?raw=true" width="300" />
 
 In rebase, no extra commits are created, but the exiting commits that you created are moved.
 
