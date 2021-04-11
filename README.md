@@ -1,8 +1,10 @@
+## CI / CD Guide
+
 This following workflow suggestion is in regards to agile project lifecycle.
 
 This adopts the methodology of &quot;long live master, short live feature branch&quot; (as known as gitflow), adopts test-driven development, and also continuous integration/development/deployment to increase project efficiency.
 
-## Git branching structure
+## Gitflow
 
 Feature branch: This is a private branch. For every feature, a new feature has to be created. The branch name would be in the format of \&lt;dev\_name\&gt;/\&lt;feature\_name\&gt;. Feature branch is short lived.
 
@@ -42,7 +44,7 @@ git rebase develop
 
 but a word of warning, rebase is best used on local feature branches that haven&#39;t been pushed, see [atlassian.com/git/tutorials/…](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing)
 
-## Coding
+## Test-driven development
 
 Test-driven development is adopted. TDD means you have to first know the purpose of the code, then write the integration test and unit test. After that, write the actual code until all the tests pass.
 
@@ -85,19 +87,19 @@ If there is something that has to be changed, the team will have to repeat the a
 
 If end-to-end testing and acceptance test pass, the release branch will be fast-forward merged into the main branch and at the same time automatically deployed for production server / ready for users to install.
 
-## Basic Git Knowledge
+## Common Git F&Q
 
-### Merge vs rebase
+**Q: What is the difference between Merge vs Rebase?**
 
 Both are for integrating new work new commit that are on separate branches. There are always at least 2 branches in play.
 
-Merge preserves the branches tree like a glue.
+Merge preserves the branches tree, like a **gluing two branches**.
 
 It is useful for combining branches that are already public
 
-Rebase does not preserve branches tree like a chainsaw.
+Rebase does not preserve branches tree like a **cutting a branch with a scissor and taping it elsewhere**.
 
-Rebase is for combining private branches, not for public one
+Rebase is for combining private branches, not for public one.
 
 ![](RackMultipart20210411-4-18zohr_html_4bb265d20787a9aa.gif)
 
