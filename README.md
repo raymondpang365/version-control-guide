@@ -20,13 +20,13 @@ There are two scenarios you should update your feature branch with new updated c
 
 To do this, types the following commands:
 
-git checkout develop
+git checkout dev
 
-git pull
+git pull origin dev
 
-git checkout feature/foo
+git checkout my-feature-branch
 
-git merge develop
+git merge dev
 
 git push
 
