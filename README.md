@@ -28,10 +28,6 @@ git checkout my-feature-branch
 
 git merge dev
 
-git push
-
-
-
 This is very important. Otherwise, when somebody pushed new commit to the remote repository, the local repo would not be in sync with the remote repo. If new changes are made in working directory without keeping it updated first, conflicts easily occur.
 
 **Advanced:**
