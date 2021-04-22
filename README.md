@@ -1,10 +1,10 @@
-## CI / CD Guide
+## 1) CI / CD Guide
 
 This following workflow suggestion is in regards to agile project lifecycle.
 
 This adopts the methodology of &quot;long live master, short live feature branch&quot; (as known as gitflow), adopts test-driven development, and also continuous integration/development/deployment to increase project efficiency.
 
-## Gitflow
+## 2) Gitflow
 
 Feature branch: This is a private branch. For every feature, a new feature has to be created. The branch name would be in the format of \&lt;dev\_name\&gt;/\&lt;feature\_name\&gt;. Feature branch is short lived.
 
@@ -14,7 +14,7 @@ Release branch: This is used for staging. Once development branch gather enough 
 
 Main branch: This is used for production. If end-to-end testing and acceptance test pass, it will be fast-forward merged to this branch.
 
-## Before Coding or upon approved pull request
+## 3) Before Coding or upon approved pull request
 
 There are two scenarios you should update your feature branch with new updated code from development branch – 1) Before Coding; 2) Immediately after there are approved pull requests from other team members
 
@@ -42,7 +42,7 @@ git rebase develop
 
 but a word of warning, rebase is best used on local feature branches that haven&#39;t been pushed, see [atlassian.com/git/tutorials/…](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing)
 
-## Test-driven development
+## 4) Test-driven development
 
 Test-driven development is adopted. TDD means you have to first know the purpose of the code, then write the integration test and unit test. After that, write the actual code until all the tests pass.
 
@@ -75,13 +75,13 @@ Optimally, there should be a continuous integration tool to automate step 1 - 5,
 
 On the development branch, integration testing has to be done daily with a cron job.
 
-## Delivery
+## 5) Delivery
 
 Once dev branch gather enough features, the dev branch will be fast-forward merged into the release branch. The release branch code is delivered to the staging server. End-to-end testing and acceptance test are done by beta testers or QA team.
 
 If there is something that has to be changed, the team will have to repeat the above process to introduce new changes in development branch. And then, fast-forward merge into release branch again
 
-## Deploy
+## 6) Deploy
 
 If end-to-end testing and acceptance test pass, the release branch will be fast-forward merged into the main branch and at the same time automatically deployed for production server / ready for users to install.
 
