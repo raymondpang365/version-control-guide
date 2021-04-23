@@ -14,7 +14,43 @@ Release branch: This is used for staging. Once development branch gather enough 
 
 Main branch: This is used for production. If end-to-end testing and acceptance test pass, it will be fast-forward merged to this branch.
 
-## 3) Before Coding or upon approved pull request
+## 3) Pushing changes, Pull request, Handling Merge conflict
+
+* 3A) Push code only if CI test is successful
+Never push your code to dev branch.
+Push your code from your local <personal_name> branch to your remote <personal_name> branch
+For example, If your name is meow
+1) Make sure you are in your personal branch
+```git checkout meow-1 ```
+* 3B) Handling Merge Conflict
+
+If you see the message
+"Can’t automatically merge. Don’t worry, you can still create the pull request."
+
+However, do not listen to it. You shouldbe worry. You should not create a pull request whenever it cannot automatically merge. So, cancel and exit the merging action page, so you still do not create the pull request yet.
+Get back to your terminal, we will resolve it without the web editor:
+```
+git checkout dev
+git pull
+git checkout meow-1
+git merge dev
+```
+Now, use your favorite IDE such as VS Code or IntelliJ.
+There should be options to let you view all the files that has unresolved conflicts.
+Some IDE, such as IntelliJ even can let you simply one click away to choose "take your own code" or "take their code" for each conflicting file.
+After resolving the issues, use 
+```git commit -m "Resolve conflict and good message to tell which codes you decide to take"```
+to commit your change.
+Then, do again 
+```git push origin meow-1```
+Remember, as I said in section 3A, you have to be patient check to make sure the githab action shows the CI/CD is a success before creating a pull request.
+If the CI/CD is successful, create a pull request again. 
+Since you have resolved the conflict, it should let you automatically merge this time.
+Wait for a code reviewer if you want to ask for advice or approval.
+After merging the branch, tell your team about it with a communication software that your team choose to use
+
+
+## 4) Before Coding or upon approved pull request
 
 There are two scenarios you should update your feature branch with new updated code from development branch – 1) Before Coding; 2) Immediately after there are approved pull requests from other team members
 
@@ -42,7 +78,7 @@ git rebase develop
 
 but a word of warning, rebase is best used on local feature branches that haven&#39;t been pushed, see [atlassian.com/git/tutorials/…](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing)
 
-## 4) Test-driven development
+## 5) Test-driven development
 
 Test-driven development is adopted. TDD means you have to first know the purpose of the code, then write the integration test and unit test. After that, write the actual code until all the tests pass.
 
@@ -75,13 +111,13 @@ Optimally, there should be a continuous integration tool to automate step 1 - 5,
 
 On the development branch, integration testing has to be done daily with a cron job.
 
-## 5) Delivery
+## 6) Delivery
 
 Once dev branch gather enough features, the dev branch will be fast-forward merged into the release branch. The release branch code is delivered to the staging server. End-to-end testing and acceptance test are done by beta testers or QA team.
 
 If there is something that has to be changed, the team will have to repeat the above process to introduce new changes in development branch. And then, fast-forward merge into release branch again
 
-## 6) Deploy
+## 7) Deploy
 
 If end-to-end testing and acceptance test pass, the release branch will be fast-forward merged into the main branch and at the same time automatically deployed for production server / ready for users to install.
 
