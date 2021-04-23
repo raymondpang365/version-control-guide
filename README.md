@@ -16,15 +16,28 @@ Main branch: This is used for production. If end-to-end testing and acceptance t
 
 ## 3) Pushing changes, Pull request, Handling Merge conflict
 
-* 3A) Push code only if CI test is successful
-Never push your code to dev branch.
+3A) Pushing changes 
+
+Never push your code to dev branch directly. 
 Push your code from your local <personal_name> branch to your remote <personal_name> branch
 For example, If your name is meow
-1) Make sure you are in your personal branch
+1) Make sure you are in your personal branch:
 ```git checkout meow-1 ```
-* 3B) Handling Merge Conflict
+2) Push to your remote personal branch:
+```git push origin meow-1```
 
-If you see the message
+3B) Making sure CI is successful
+A github workflow should have been set up.
+Go to Actions tab in the repository
+Find that you are running a CI workflow.
+Make sure it is successful (green dot/ green tick) before making a pull request
+
+Go to Pull requests.
+Click "New Pull Request
+
+3C) Handling Merge Conflict
+
+If you see the message:
 "Can’t automatically merge. Don’t worry, you can still create the pull request."
 
 However, do not listen to it. You shouldbe worry. You should not create a pull request whenever it cannot automatically merge. So, cancel and exit the merging action page, so you still do not create the pull request yet.
