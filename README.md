@@ -49,7 +49,8 @@ git checkout dev
 git pull
 git checkout meow-1
 git merge dev
-```. 
+```
+  
 Now, use your favorite IDE such as VS Code or IntelliJ.  
 There should be options to let you view all the files that has unresolved conflicts.  
 Some IDE, such as IntelliJ even can let you simply one click away to choose "take your own code" or "take their code" for each conflicting file.
