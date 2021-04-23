@@ -67,9 +67,11 @@ Wait for a code reviewer if you want to ask for advice or approval.
 After merging the branch, tell your team about it with a communication software that your team choose to use. 
 
 
-## 4) Before Coding or upon approved pull request
+## 4) Keeping up to date
 
-There are two scenarios you should update your feature branch with new updated code from development branch – 1) Before Coding; 2) Immediately after there are approved pull requests from other team members
+There are two scenarios you should update your feature branch with new updated code from development branch –   
+1) Before Coding;   
+2) 2) Immediately after there are approved pull requests from other team members
 
 To do this, types the following commands:
 ```
@@ -98,7 +100,7 @@ Every time you write a feature, commit the code. Each commit is not have more th
 
 But before commit the code, you have to run and pass the unit test.
 
-## 6) Advanved Integration
+## 6) Advanced Integration
 
 Only when the feature is fully implemented, the dev have to
 
