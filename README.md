@@ -6,7 +6,7 @@ This adopts the methodology of &quot;long live master, short live feature branch
 
 ## 2) Gitflow
 
-Feature branch: This is a private branch. For every feature, a new feature has to be created. The branch name would be in the format of \&lt;dev\_name\&gt;/\&lt;feature\_name\&gt;. Feature branch is short lived.
+Feature branch: This is a private branch. For every feature, a new feature has to be created. The branch name would be in the format of <dev_name>/<feature_name>. Feature branch is short lived.
 
 Dev branch: This is a public branch and the common source of truth for the up to date development. The code of this branch must pass all the unit test and integrated test.
 
