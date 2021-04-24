@@ -86,16 +86,17 @@ Go to the next section **"1.3-E) Handling Merge Conflict"** to see how to resolv
 
 ### 1.3-E) Handling Merge Conflict
 
-Go to your terminal
+Go to your terminal, type:  
 ```
 git checkout dev
 git pull
 git checkout meow-1
 git merge dev
 ```
-This command merge meow-1 to dev
-Now, use your favorite IDE such as VS Code or IntelliJ.  
-There should be options to let you view all the files that has unresolved conflicts.  
+Now, You can see whether there are conflicted files  
+```git diff --name-only --diff-filter=U``` tot show all conflicted files
+  
+Or, I recommend you use IDE such as VS Code or IntelliJ, because viewing unresolved conflicts would be a lot easier.  
 Some IDE, such as IntelliJ even can let you simply one click away to choose "take your own code" or "take their code" for each conflicting file.  
 After resolving the issues, commit your change:   
 ```git commit -m "Resolve conflict and good message to tell which codes you decide to take"```
