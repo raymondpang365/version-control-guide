@@ -82,7 +82,7 @@ Get back to your terminal, we will resolve it in the terminal instead of web edi
 
 Go to the next section **"1.3-E) Handling Merge Conflict"** to see how to resolve Merge Conflect
 
-### 1.3E) Handling Merge Conflict
+### 1.3-E) Handling Merge Conflict
 
 Go to your terminal
 ```
@@ -134,7 +134,7 @@ git rebase develop
 ```
 but a word of warning, rebase is best used on local feature branches that haven&#39;t been pushed, see [atlassian.com/git/tutorials/…](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing)
 
-## `1.5) Delivery, Deploy and Release (to be confirmed)
+## 1.5) Delivery, Deploy and Release (to be confirmed)
 
 Once dev branch gather enough features, the dev branch will be fast-forward merged into the release branch. The release branch code is delivered to the staging server. End-to-end testing and acceptance test are done by beta testers or QA team.
 
