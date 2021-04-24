@@ -104,11 +104,13 @@ After resolving the issues, commit your change:
 Then, do again:  
 ```git push origin meow-1```
   
-(Remember, as I said in section 3B, you have to be patient check to make sure the githab action shows the CI/CD is a success before creating a pull request.  If the CI/CD is successful, create a pull request again.)   
+Then, make sure CI/CD is a success  
+
+Then, try to create a pull request
   
-Since you have resolved the conflict, it should let you automatically merge this time.  
+It should let you automatically merge this time.  
 Wait for a code reviewer if you want to ask for advice or approval.  
-After merging the branch, tell your team about it with a communication software that your team choose to use. 
+After merging the branch, tell your team about it with a communication software that your team has been using. 
 
 
 ## 1.4) Keeping local code up to date
