@@ -23,6 +23,14 @@ But before commit the code, you have to run and pass all the unit tests.
 
 ## 3) Pushing changes, Pull request, Handling Merge conflict
 
+### 3A) Commiting changes locally
+
+Use ```git add .``` and ```git commit -m "useful message"``` to commit
+After that, it is a very good habit to pull the code first.
+After pulling, there would be some merge conflicts.
+These are normal. Do not panic.
+Go to section [#3C)-Handling-Merge-Conflict]3D to see how to resolve Merge Conflect
+
 ### 3A) Pushing changes 
 
 Never push your code to dev branch directly.  
@@ -81,6 +89,7 @@ After merging the branch, tell your team about it with a communication software 
 
 There are two scenarios you should update your feature branch with new updated code from development branch –   
 i) Before Coding.  
+2) After commiting the code (The Commit > Pull > Push steps)
 ii) Immediately after there are approved pull requests from other team members
 
 To do this, types the following commands:
