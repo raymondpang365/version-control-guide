@@ -55,7 +55,7 @@ i) Make sure you are in your personal branch:
 ii) Push to your remote personal branch:  
 ```git push origin meow-1```.  
   
-Keep pull requests small and frequent.  
+It is a good practice to keep pull requests small and frequent, so that resolving merge conflict becomes easier.  
 Each pull requests should not have more than 250 lines change.
 
 ### 1.3-C) Making sure CI is successful.   
