@@ -19,7 +19,7 @@ Main branch: This is used for production. If end-to-end testing and acceptance t
 
 Test-driven development is adopted. TDD means you have to first know the purpose of the code, then write the integration test and unit test. After that, write the actual code until all the tests pass.
 
-But before commit the code, you have to run and pass all the unit test.
+But before commit the code, you have to run and pass all the unit tests.
 
 ## 3) Pushing changes, Pull request, Handling Merge conflict
 
