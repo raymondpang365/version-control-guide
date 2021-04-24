@@ -107,7 +107,7 @@ but a word of warning, rebase is best used on local feature branches that haven&
 After using ```git commit -m "msg"``` to commit, pull remote master branch to local master branch.   To do this, type:   
   ```git pull --rebase=preserve --rebase=preserve```
   
- This maakes sure new local commits that hasn&#39;t been uploaded will be combined on top of the master branch codes,   
+ This makes sure new local commits that hasn&#39;t been uploaded will be combined on top of the master branch codes,   
  so that the local commits will not be overwritten. 
 
 1. Set a Github action prehook that will automatically do linting, unit testing, integration testing and test if it can build in local/remote environment. They pull request can be uploaded only if everything pass.  
