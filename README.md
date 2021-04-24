@@ -110,10 +110,13 @@ After merging the branch, tell your team about it with a communication software 
 
 ## 1.4) Keeping local code up to date
 
-There are two scenarios you should update your feature branch with new updated code from development branch –   
-i) Before Coding.  
-2) After commiting the code (The Commit > Pull > Push steps) as abovementioned in section 1.3-A
-ii) Immediately after there are approved pull requests from other team members
+The rule of thumb is keep code pulling as frequent as possible.  
+At minimum,should update your feature branch with new updated code from development branch in one scenario –   
+i) After commiting the code and before pushin changes (The Commit > Pull > Push steps) as abovementioned in section 1.3-A.  
+
+And, it is highly recommended you also pull new changes:  
+i) Before you start your day of coding job. 
+ii) Immediately after there are approved pull requests from other team members. 
 
 To do this, types the following commands:
 ```
