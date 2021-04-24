@@ -1,12 +1,10 @@
 Cheat sheet guidelines for developers wanting to get better at version control.
 
-## 1) CI / CD Guide
+This following guideline is written in the perspective of Agile Project Lifecycle Methodology,  aiming to increase productivity, speed and quality of the project.
 
-This following guideline is written in the perspective of Agile Project Lifecycle Methodology.
+## 1) Gitflow
 
-This adopts the methodology of &quot;long live master, short live feature branch&quot; (as known as gitflow), adopts test-driven development, and also continuous integration/development/deployment to increase project efficiency.
-
-## 2) Gitflow
+Gitflow adopts the methodology of &quot;long live master, short live feature branch&quot; (as known as gitflow),
 
 Feature branch: This is a private branch. For every feature, a new feature has to be created. The branch name would be in the format of <dev_name>/<feature_name>. Feature branch is short lived.
 
@@ -16,19 +14,19 @@ Release branch: This is used for staging. Once development branch gather enough 
 
 Main branch: This is used for production. If end-to-end testing and acceptance test pass, it will be fast-forward merged to this branch.
 
-## 3) Pushing changes, Pull request, Handling Merge conflict
+## 2) Pushing changes, Pull request, Handling Merge conflict
 
-### 3A) Pushing changes 
+### 2A) Pushing changes 
 
 Never push your code to dev branch directly.  
 Push your code from your local <personal_name> branch to your remote <personal_name> branch. 
 For example, If your name is meow. 
-1) Make sure you are in your personal branch:  
+i) Make sure you are in your personal branch:  
 ```git checkout meow-1 ```
-2) Push to your remote personal branch:  
+ii) Push to your remote personal branch:  
 ```git push origin meow-1```
 
-### 3B) Making sure CI is successful.   
+### 2B) Making sure CI is successful.   
 A github workflow should have been set up.  
 Go to Actions tab in the repository. 
 Find that you are running a CI workflow.  
@@ -37,7 +35,7 @@ Make sure it is successful (green dot/ green tick) before making a pull request.
 Go to Pull requests.  
 Click "New Pull Request. 
 
-### 3C) Handling Merge Conflict
+### 2C) Handling Merge Conflict
 
 If you see the message:  
 "Can’t automatically merge. Don’t worry, you can still create the pull request."  
@@ -69,11 +67,11 @@ Wait for a code reviewer if you want to ask for advice or approval.
 After merging the branch, tell your team about it with a communication software that your team choose to use. 
 
 
-## 4) Keeping local code up to date
+## 3) Keeping local code up to date
 
 There are two scenarios you should update your feature branch with new updated code from development branch –   
-1) Before Coding;   
-2) 2) Immediately after there are approved pull requests from other team members
+i) Before Coding.  
+ii) Immediately after there are approved pull requests from other team members
 
 To do this, types the following commands:
 ```
@@ -94,7 +92,7 @@ git rebase develop
 ```
 but a word of warning, rebase is best used on local feature branches that haven&#39;t been pushed, see [atlassian.com/git/tutorials/…](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing)
 
-## 5) Test-driven development
+## 4) Test-driven development
 
 Test-driven development is adopted. TDD means you have to first know the purpose of the code, then write the integration test and unit test. After that, write the actual code until all the tests pass.
 
@@ -102,7 +100,7 @@ Every time you write a feature, commit the code. Each commit is not have more th
 
 But before commit the code, you have to run and pass the unit test.
 
-## 6) Advanced Integration
+## 5) Advanced Integration
 
 Only when the feature is fully implemented, the dev have to
 
@@ -123,13 +121,11 @@ Optimally, there should be a continuous integration tool to automate step 1 - 5,
 
 On the development branch, integration testing has to be done daily with a cron job.
 
-## 6) Delivery
+## 6) Delivery, Deploy and Release
 
 Once dev branch gather enough features, the dev branch will be fast-forward merged into the release branch. The release branch code is delivered to the staging server. End-to-end testing and acceptance test are done by beta testers or QA team.
 
 If there is something that has to be changed, the team will have to repeat the above process to introduce new changes in development branch. And then, fast-forward merge into release branch again
-
-## 7) Deploy & Release
 
 If end-to-end testing and acceptance test pass, the release branch will be fast-forward merged into the main branch and at the same time automatically deployed for production server / ready for users to install.
 
