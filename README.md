@@ -36,7 +36,7 @@ After using ```git commit -m "msg"``` to commit, pull remote master branch to lo
  This makes sure new local commits that hasn&#39;t been uploaded will be combined on top of the master branch codes,   
  so that the local commits will not be overwritten. 
  
-(To use an alternative strategy with git stash, see section 5)
+(To use an alternative strategy with git stash, see section 2.1 in the advanced guide)
 
 Never use rebase here, as the target merge branch is public.  Use merge instead to avoid tangling codes from two branches
 
