@@ -2,7 +2,7 @@ Cheat sheet guidelines for developers wanting to get better at version control.
 
 ## 1) CI / CD Guide
 
-This following workflow suggestion is written in the perspective of Agile Project Lifecycle Methodology.
+This following guideline is written in the perspective of Agile Project Lifecycle Methodology.
 
 This adopts the methodology of &quot;long live master, short live feature branch&quot; (as known as gitflow), adopts test-driven development, and also continuous integration/development/deployment to increase project efficiency.
 
