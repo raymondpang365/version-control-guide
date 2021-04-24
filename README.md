@@ -2,7 +2,7 @@ Cheat sheet guidelines for developers wanting to get better at version control.
 
 This following guideline is written in the perspective of Agile Project Lifecycle Methodology,  aiming to increase productivity, speed and quality of the project.
 
-# 1 Basuc Guide
+# 1) Basic Guide
 
 ## 1.1) Gitflow
 
