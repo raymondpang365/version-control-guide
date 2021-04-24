@@ -1,10 +1,12 @@
 Cheat sheet guidelines for developers wanting to get better at version control.
 
-This following guideline is written in the perspective of Agile Project Lifecycle Methodology, aiming to increase productivity, speed and quality of the project.
+This following guideline is written in the perspective of Agile Project Lifecycle Methodology,  aiming to increase productivity, speed and quality of the project.  
 
-Chapter 1 - Basic Guide
-1.1) Gitflow
-Gitflow adopts the methodology of "long live master, short live feature branch" (as known as gitflow),
+# Chapter 1 - Basic Guide
+
+## 1.1) Gitflow
+
+Gitflow adopts the methodology of &quot;long live master, short live feature branch&quot; (as known as gitflow),
 
 Feature branch: This is a private branch. For every feature, a new feature has to be created. The branch name would be in the format of <dev_name>/<feature_name>. Feature branch is short lived.
 
@@ -14,119 +16,160 @@ Release branch: This is used for staging. Once development branch gather enough 
 
 Main branch: This is used for production. If end-to-end testing and acceptance test pass, it will be fast-forward merged to this branch.
 
-1.2) Test-driven development
+
+## 1.2) Test-driven development
+
 Test-driven development must be adopted. TDD means you have to first know the purpose of the code, then write the integration test and unit test. After that, write the actual code until all the tests pass.
 
-The baseline is that, at least write tests immidiately after you write the code.
+The baseline is that, at least write tests immidiately after you write the code.  
 Before commiting the code, you have to run and make sure you pass all the unit tests.
 
-1.3) Pushing changes, Pull request, Handling Merge conflict
-1.3-A) Commiting changes locally
-Use git add . and git commit -m "useful message" to commit.
+## 1.3) Pushing changes, Pull request, Handling Merge conflict
 
-After that, it is a very good habit to first pull the code.
+### 1.3-A) Commiting changes locally
 
-After using git commit -m "msg" to commit, pull remote master branch to local master branch. To do this, type:
-git pull --rebase --preserve-merges.
+Use ```git add .``` and ```git commit -m "useful message"``` to commit.   
+  
+After that, it is a very good habit to first pull the code.  
 
---rebase --preserve-merges This makes sure new local commits that hasn't been uploaded will be combined on top of the master branch codes,
-so that the local commits will not be overwritten.
+After using ```git commit -m "msg"``` to commit, pull remote master branch to local master branch.   To do this, type:   
+  ```git pull --rebase --preserve-merges```. 
+  
+``` --rebase --preserve-merges``` This makes sure new local commits that hasn&#39;t been uploaded will be combined on top of the master branch codes,   
+ so that the local commits will not be overwritten. 
 
-Never use rebase without preserve merges, otherwise, it will cause tangling codes among two branches.
+Never use ```rebase``` without ```preserve merges```, otherwise, it will cause tangling codes among two branches.   
 
-After pulling, there would be some merge conflicts. This is normal. Do not panic. Go to section "1.3-E) Handling Merge Conflict" to see how to resolve Merge Conflect
+After pulling, there would be some merge conflicts.
+This is normal. Do not panic.
+Go to section **"1.3-E) Handling Merge Conflict"** to see how to resolve Merge Conflect
 
 (To learn about an alternative strategy, see section 2.1 in the advanced guide)
 
-1.3-B) Pushing changes
-Never push your code to dev branch directly.
-Push your code from your local <personal_name> branch to your remote <personal_name> branch. For example, If your name is meow.
-i) Make sure you are in your personal branch:
-git checkout meow-1 .
-ii) Push to your remote personal branch:
-git push origin meow-1.
+### 1.3-B) Pushing changes 
 
-It is a good practice to keep pull requests small and frequent, so that resolving merge conflict becomes easier.
+Never push your code to dev branch directly.  
+Push your code from your local <personal_name> branch to your remote <personal_name> branch. 
+For example, If your name is meow.   
+i) Make sure you are in your personal branch:    
+```git checkout meow-1 ```.  
+ii) Push to your remote personal branch:  
+```git push origin meow-1```.  
+  
+It is a good practice to keep pull requests small and frequent, so that resolving merge conflict becomes easier.  
 Each pull requests should not have more than 250 lines change.
 
-1.3-C) Making sure CI is successful.
-A github workflow should be set up for a project.
-I will not cover the detail of how to setting up a CI workflow in this guide . There are so many tools out there that can create the CI workflow. If you have set up the CI workflow properly, and if you are using Github, you can navigate to Actions tab of your repo and find that you are runnng a CI workflow automatically after pushing Make sure it is successful (green dot/ green tick) before making a pull request.
+### 1.3-C) Making sure CI is successful.   
+A github workflow should be set up for a project.  
+I will not cover the detail of how to setting up a CI workflow in this guide . There are so many tools out there that can create the CI workflow.
+If you have set up the CI workflow properly, and if you are using Github,  you can navigate to Actions tab of your repo and find that you are runnng a CI workflow automatically after pushing
+Make sure it is successful (green dot/ green tick) before making a pull request. 
 
-Successful? Go to Pull requests.
+Successful? Go to Pull requests.  
 If you are using github, navigate to "Pull requests" tab and click "New Pull Request"
 
-1.3-D) Making sure there is no conflict
+### 1.3-D) Making sure there is no conflict 
+
 You go to a page which compares and tell you whether you can automatica merge.
 
-For example, in github, there may be a message
-"Can’t automatically merge. Don’t worry, you can still create the pull request."
+For example, in github, there may be a message  
+"Can’t automatically merge. Don’t worry, you can still create the pull request."  
 
-Do not listen to it saying "Don't worry". It is always better to be careful.
-You should not create a pull request whenever it cannot automatically merge.
+Do not listen to it saying "Don't worry". It is always better to be careful.   
+You should not create a pull request whenever it cannot automatically merge.   
+  
+    
+So, cancel and exit the merging action page, so you still do not create the pull request yet.  
+Get back to your terminal, we will resolve it in the terminal instead of web editor.  
 
-So, cancel and exit the merging action page, so you still do not create the pull request yet.
-Get back to your terminal, we will resolve it in the terminal instead of web editor.
+Go to the next section **"1.3-E) Handling Merge Conflict"** to see how to resolve Merge Conflect
 
-Go to the next section "1.3-E) Handling Merge Conflict" to see how to resolve Merge Conflect
+### 1.3-E) Handling Merge Conflict
 
-1.3-E) Handling Merge Conflict
-Go to your terminal, type:
-
+Go to your terminal, type:  
+```
 git checkout dev
 git pull
 git checkout meow-1
 git merge dev
-Now, You can see whether there are conflicted files
-git diff --name-only --diff-filter=U tot show all conflicted files
+```
+Now, You can see whether there are conflicted files  
+```git diff --name-only --diff-filter=U``` tot show all conflicted files
+  
+Or, I recommend you use IDE such as VS Code or IntelliJ, because viewing unresolved conflicts would be a lot easier.  
+Some IDE, such as IntelliJ can even let you click a buton - "take yours" or "take theirs" - to resolve each conflicting file.  
+After resolving the issues, commit your change:   
+```git commit -m "Resolve conflict and good message to tell which codes you decide to take"```
 
-Or, I recommend you use IDE such as VS Code or IntelliJ, because viewing unresolved conflicts would be a lot easier.
-Some IDE, such as IntelliJ can even let you click a buton - "take yours" or "take theirs" - to resolve each conflicting file.
-After resolving the issues, commit your change:
-git commit -m "Resolve conflict and good message to tell which codes you decide to take"
-
-Then, do again:
-git push origin meow-1
-
-Then, make sure CI/CD is a success
+Then, do again:  
+```git push origin meow-1```
+  
+Then, make sure CI/CD is a success  
 
 Then, try to create a pull request
+  
+It should let you automatically merge this time.  
+Wait for a code reviewer if you want to ask for advice or approval.  
+After merging the branch, tell your team about it with a communication software that your team has been using. 
 
-It should let you automatically merge this time.
-Wait for a code reviewer if you want to ask for advice or approval.
-After merging the branch, tell your team about it with a communication software that your team has been using.
 
-1.4) Keeping local code up to date
-The rule of thumb is keep code pulling (such as git pull) as frequent as possible.
-At minimum, do it in one scenario –
-i) After commiting the code and before pushin changes (The Commit > Pull > Push steps) as abovementioned in section 1.3-A.
+## 1.4) Keeping local code up to date
 
-And, it is highly recommended you also pull new changes:
-i) Before you start your day of coding job. ii) Immediately after there are approved pull requests from other team members.
+The rule of thumb is keep code pulling (such as ```git pull```) as frequent as possible.  
+At minimum, do it in one scenario –   
+i) After commiting the code and before pushin changes (The Commit > Pull > Push steps) as abovementioned in section 1.3-A.  
+
+And, it is highly recommended you also pull new changes:  
+i) Before you start your day of coding job. 
+ii) Immediately after there are approved pull requests from other team members. 
 
 To do this, types the following commands:
-
+```
 git checkout dev
 git pull origin dev
 git checkout my-feature-branch
 git merge dev
+```
 This is very important. Otherwise, when somebody pushed new commit to the remote repository, the local repo would not be in sync with the remote repo. If new changes are made in working directory without keeping it updated first, conflicts easily occur.
 
-Advanced:
+**Advanced:**
 
 If you are lazy, you can
-
+```
 git checkout feature/foo
 git pull --all
 git rebase develop
-but a word of warning, rebase is best used on local feature branches that haven't been pushed, see atlassian.com/git/tutorials/…
+```
+but a word of warning, rebase is best used on local feature branches that haven&#39;t been pushed, see [atlassian.com/git/tutorials/…](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing)
 
-1.5) Delivery, Deploy and Release (to be confirmed)
-Once dev branch gather enough features, the dev branch will be fast-forward merged into the release branch.
+## 1.5) Delivery, Deploy and Release (to be confirmed)
+
+Once dev branch gather enough features, the dev branch will be fast-forward merged into the release branch.  
 The release branch code is delivered to the staging server. End-to-end testing and acceptance test are done by beta testers or QA team.
 
-If there is something that has to be changed, the team will have to repeat the above process to introduce new changes in development branch.
+If there is something that has to be changed, the team will have to repeat the above process to introduce new changes in development branch.  
 And then, fast-forward merge into release branch again
 
-If end-to-end testing and acceptance test pass, the release branch will be fast-forward merged into the main branch;
+If end-to-end testing and acceptance test pass, the release branch will be fast-forward merged into the main branch;  
 And at the same time, automatically deployed for production server / ready for users to install.
+
+
+## Common Git F&Q
+
+**Q: What is the difference between Merge vs Rebase?**
+
+Both are for integrating new work new commit that are on separate branches. There are always at least 2 branches in play.
+
+Merge preserves the branches tree, like a **gluing two branches**.
+
+It is useful for combining branches that are already public
+
+Rebase does not preserve branches tree like a **cutting a branch with a scissor and taping it elsewhere**.
+
+Rebase is for combining private branches, not for public one.
+
+<img src="https://github.com/psfr937/version-control-guide/blob/master/merge_and_rebase_illustration.jpg?raw=true" width="300" />
+
+In rebase, no extra commits are created, but the exiting commits that you created are moved.
+
+In rebase you can find that the commits has changed the hash because the timeline is changed, the hash has to be recalculated.
