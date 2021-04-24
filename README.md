@@ -2,7 +2,9 @@ Cheat sheet guidelines for developers wanting to get better at version control.
 
 This following guideline is written in the perspective of Agile Project Lifecycle Methodology,  aiming to increase productivity, speed and quality of the project.
 
-## 1) Gitflow
+# 1 Basuc Guide
+
+## 1.1) Gitflow
 
 Gitflow adopts the methodology of &quot;long live master, short live feature branch&quot; (as known as gitflow),
 
@@ -15,15 +17,15 @@ Release branch: This is used for staging. Once development branch gather enough 
 Main branch: This is used for production. If end-to-end testing and acceptance test pass, it will be fast-forward merged to this branch.
 
 
-## 2) Test-driven development
+## 1.2) Test-driven development
 
 Test-driven development is adopted. TDD means you have to first know the purpose of the code, then write the integration test and unit test. After that, write the actual code until all the tests pass.
 
 But before commit the code, you have to run and pass all the unit tests.
 
-## 3) Pushing changes, Pull request, Handling Merge conflict
+## 1.3) Pushing changes, Pull request, Handling Merge conflict
 
-### 3A) Commiting changes locally
+### 1.3-A) Commiting changes locally
 
 Use ```git add .``` and ```git commit -m "useful message"``` to commit
 After that, it is a very good habit to pull the code first.
@@ -40,9 +42,9 @@ Never use rebase here, as the target merge branch is public.  Use merge instead 
 
 After pulling, there would be some merge conflicts.
 This is normal. Do not panic.
-Go to section **"3D) Handling Merge Conflict"** to see how to resolve Merge Conflect
+Go to section **"1.3-E) Handling Merge Conflict"** to see how to resolve Merge Conflect
 
-### 3B) Pushing changes 
+### 1.3-B) Pushing changes 
 
 Never push your code to dev branch directly.  
 Push your code from your local <personal_name> branch to your remote <personal_name> branch. 
@@ -55,7 +57,7 @@ ii) Push to your remote personal branch:
 Keep pull requests small and frequent.  
 Each pull requests should not have more than 250 lines change.
 
-### 3C) Making sure CI is successful.   
+### 1.3-C) Making sure CI is successful.   
 A github workflow should have been set up.  
 Go to Actions tab in the repository. 
 Find that you are running a CI workflow.  
@@ -64,7 +66,7 @@ Make sure it is successful (green dot/ green tick) before making a pull request.
 Successful? Go to Pull requests.  
 Click "New Pull Request. 
 
-### 3D) Making sure there is no conflict 
+### 1.3-D) Making sure there is no conflict 
 
 You go to a page which compares and tell you whether you can automatica merge.
 
@@ -76,11 +78,11 @@ You should not create a pull request whenever it cannot automatically merge.
   
     
 So, cancel and exit the merging action page, so you still do not create the pull request yet.  
-Get back to your terminal, we will resolve it in the terminal instead of web editor:  
+Get back to your terminal, we will resolve it in the terminal instead of web editor.  
 
-Go to section **"3E) Handling Merge Conflict"** to see how to resolve Merge Conflect
+Go to the next section **"1.3-E) Handling Merge Conflict"** to see how to resolve Merge Conflect
 
-### 3E) Handling Merge Conflict
+### 1.3E) Handling Merge Conflict
 
 Go to your terminal
 ```
@@ -106,7 +108,7 @@ Wait for a code reviewer if you want to ask for advice or approval.
 After merging the branch, tell your team about it with a communication software that your team choose to use. 
 
 
-## 4) Keeping local code up to date
+## 1.4) Keeping local code up to date
 
 There are two scenarios you should update your feature branch with new updated code from development branch –   
 i) Before Coding.  
@@ -132,8 +134,17 @@ git rebase develop
 ```
 but a word of warning, rebase is best used on local feature branches that haven&#39;t been pushed, see [atlassian.com/git/tutorials/…](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing)
 
+## `1.5) Delivery, Deploy and Release (to be confirmed)
 
-## 5) Advanced Strategy (to be confirmed)  
+Once dev branch gather enough features, the dev branch will be fast-forward merged into the release branch. The release branch code is delivered to the staging server. End-to-end testing and acceptance test are done by beta testers or QA team.
+
+If there is something that has to be changed, the team will have to repeat the above process to introduce new changes in development branch. And then, fast-forward merge into release branch again
+
+If end-to-end testing and acceptance test pass, the release branch will be fast-forward merged into the main branch and at the same time automatically deployed for production server / ready for users to install.
+
+# 2) Advanced Guide 
+
+## 2.1) Using git stash in merging (to be confirmed)  
 
 Stash your local changes:  
 
@@ -150,27 +161,17 @@ git add
 git commit
 git push
 ```  
-In my experience this is the path to least resistance with Git (on the command line anyway).   
+  
 
-
- 
-
-
-2 CI / CD Workflow
+## 2.2) CI / CD Automation Tool
 1. Set a Github action prehook that will automatically do linting, unit testing, integration testing and test if it can build in local/remote environment. They pull request can be uploaded only if everything pass.   
 2. On the development branch, integration testing can be done daily with a cron job.
 3. Optimally, there should be a continuous integration tool to automate, such as rultor.com
 
 
-## 6) Delivery, Deploy and Release (to be confirmed)
 
-Once dev branch gather enough features, the dev branch will be fast-forward merged into the release branch. The release branch code is delivered to the staging server. End-to-end testing and acceptance test are done by beta testers or QA team.
 
-If there is something that has to be changed, the team will have to repeat the above process to introduce new changes in development branch. And then, fast-forward merge into release branch again
-
-If end-to-end testing and acceptance test pass, the release branch will be fast-forward merged into the main branch and at the same time automatically deployed for production server / ready for users to install.
-
-## Common Git F&Q
+## 3) Common Git F&Q
 
 **Q: What is the difference between Merge vs Rebase?**
 
