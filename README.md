@@ -27,16 +27,17 @@ But before commit the code, you have to run and pass all the unit tests.
 
 ### 1.3-A) Commiting changes locally
 
-Use ```git add .``` and ```git commit -m "useful message"``` to commit
-After that, it is a very good habit to pull the code first.
+Use ```git add .``` and ```git commit -m "useful message"``` to commit.   
+  
+After that, it is a very good habit to first pull the code.  
 
 After using ```git commit -m "msg"``` to commit, pull remote master branch to local master branch.   To do this, type:   
-  ```git pull --rebase --preserve-merges```
+  ```git pull --rebase --preserve-merges```. 
   
- This makes sure new local commits that hasn&#39;t been uploaded will be combined on top of the master branch codes,   
+``` --rebase --preserve-merges``` This makes sure new local commits that hasn&#39;t been uploaded will be combined on top of the master branch codes,   
  so that the local commits will not be overwritten. 
 
-Never use rebase here, as the target merge branch is public.  Use merge instead to avoid tangling codes from two branches
+Never use ```rebase``` without ```preserve merges```, otherwise, it will cause tangling codes among two branches.   
 
 After pulling, there would be some merge conflicts.
 This is normal. Do not panic.
