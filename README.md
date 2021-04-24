@@ -97,7 +97,7 @@ Now, You can see whether there are conflicted files
 ```git diff --name-only --diff-filter=U``` tot show all conflicted files
   
 Or, I recommend you use IDE such as VS Code or IntelliJ, because viewing unresolved conflicts would be a lot easier.  
-Some IDE, such as IntelliJ even can let you simply one click away to choose "take your own code" or "take their code" for each conflicting file.  
+Some IDE, such as IntelliJ can even let you click a buton - "take yours" or "take theirs" - to resolve each conflicting file.  
 After resolving the issues, commit your change:   
 ```git commit -m "Resolve conflict and good message to tell which codes you decide to take"```
 
