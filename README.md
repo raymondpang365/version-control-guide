@@ -35,14 +35,14 @@ After using ```git commit -m "msg"``` to commit, pull remote master branch to lo
   
  This makes sure new local commits that hasn&#39;t been uploaded will be combined on top of the master branch codes,   
  so that the local commits will not be overwritten. 
- 
-(To use an alternative strategy with git stash, see section 2.1 in the advanced guide)
 
 Never use rebase here, as the target merge branch is public.  Use merge instead to avoid tangling codes from two branches
 
 After pulling, there would be some merge conflicts.
 This is normal. Do not panic.
 Go to section **"1.3-E) Handling Merge Conflict"** to see how to resolve Merge Conflect
+
+(To learn about an alternative strategy, see section 2.1 in the advanced guide)
 
 ### 1.3-B) Pushing changes 
 
@@ -112,7 +112,7 @@ After merging the branch, tell your team about it with a communication software 
 
 There are two scenarios you should update your feature branch with new updated code from development branch –   
 i) Before Coding.  
-2) After commiting the code (The Commit > Pull > Push steps)
+2) After commiting the code (The Commit > Pull > Push steps) as abovementioned in section 1.3-A
 ii) Immediately after there are approved pull requests from other team members
 
 To do this, types the following commands:
