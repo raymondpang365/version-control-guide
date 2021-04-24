@@ -104,7 +104,8 @@ but a word of warning, rebase is best used on local feature branches that haven&
 
 ## 5) Advanced Strategy (to be confirmed)
 
-1 Using rebase
+1 Using rebase. 
+  
 After using ```git commit -m "msg"``` to commit, pull remote master branch to local master branch.   To do this, type:   
   ```git pull --rebase --preserve-merges```
   
