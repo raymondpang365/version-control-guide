@@ -28,10 +28,10 @@ But before commit the code, you have to run and pass all the unit tests.
 Use ```git add .``` and ```git commit -m "useful message"``` to commit
 After that, it is a very good habit to pull the code first.
 After pulling, there would be some merge conflicts.
-These are normal. Do not panic.
-Go to section "3D)Handling Merge Conflict" to see how to resolve Merge Conflect
+This is normal. Do not panic.
+Go to section **"3D) Handling Merge Conflict"** to see how to resolve Merge Conflect
 
-### 3A) Pushing changes 
+### 3B) Pushing changes 
 
 Never push your code to dev branch directly.  
 Push your code from your local <personal_name> branch to your remote <personal_name> branch. 
@@ -44,31 +44,41 @@ ii) Push to your remote personal branch:
 Keep pull requests small and frequent.  
 Each pull requests should not have more than 250 lines change.
 
-### 3B) Making sure CI is successful.   
+### 3C) Making sure CI is successful.   
 A github workflow should have been set up.  
 Go to Actions tab in the repository. 
 Find that you are running a CI workflow.  
 Make sure it is successful (green dot/ green tick) before making a pull request. 
 
-Go to Pull requests.  
+Successful? Go to Pull requests.  
 Click "New Pull Request. 
 
-### 3C) Handling Merge Conflict
+### 3D) Making sure there is no conflict 
 
-If you see the message:  
+You go to a page which compares and tell you whether you can automatica merge.
+
+For example, in github, there may be a message  
 "Can’t automatically merge. Don’t worry, you can still create the pull request."  
 
-However, do not listen to it. You should be worry.   
+Do not listen to it saying "Don't worry". It is always better to be careful.   
 You should not create a pull request whenever it cannot automatically merge.   
+  
+    
 So, cancel and exit the merging action page, so you still do not create the pull request yet.  
-Get back to your terminal, we will resolve it without the web editor:  
+Get back to your terminal, we will resolve it in the terminal instead of web editor:  
+
+Go to section **"3E) Handling Merge Conflict"** to see how to resolve Merge Conflect
+
+### 3E) Handling Merge Conflict
+
+Go to your terminal
 ```
 git checkout dev
 git pull
 git checkout meow-1
 git merge dev
 ```
-  
+This command merge meow-1 to dev
 Now, use your favorite IDE such as VS Code or IntelliJ.  
 There should be options to let you view all the files that has unresolved conflicts.  
 Some IDE, such as IntelliJ even can let you simply one click away to choose "take your own code" or "take their code" for each conflicting file.  
