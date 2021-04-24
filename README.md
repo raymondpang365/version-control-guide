@@ -106,7 +106,7 @@ but a word of warning, rebase is best used on local feature branches that haven&
 
 Only when the feature is fully implemented, the dev have to
 
- Commit your code locally. Type ```git commit -m &quot;msg&quot; to commit```
+ Commit your code locally. Type ```git commit -m "msg"``` to commit
  pull remote master branch to local master branch. To do this, type:   
   ```git pull --rebase=preserve --rebase=preserve```
   
