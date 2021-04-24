@@ -67,7 +67,7 @@ Wait for a code reviewer if you want to ask for advice or approval.
 After merging the branch, tell your team about it with a communication software that your team choose to use. 
 
 
-## 4) Keeping up to date
+## 4) Keeping local code up to date
 
 There are two scenarios you should update your feature branch with new updated code from development branch –   
 1) Before Coding;   
@@ -127,7 +127,7 @@ Once dev branch gather enough features, the dev branch will be fast-forward merg
 
 If there is something that has to be changed, the team will have to repeat the above process to introduce new changes in development branch. And then, fast-forward merge into release branch again
 
-## 7) Deploy
+## 7) Deploy & Release
 
 If end-to-end testing and acceptance test pass, the release branch will be fast-forward merged into the main branch and at the same time automatically deployed for production server / ready for users to install.
 
