@@ -110,8 +110,8 @@ After merging the branch, tell your team about it with a communication software 
 
 ## 1.4) Keeping local code up to date
 
-The rule of thumb is keep code pulling as frequent as possible.  
-At minimum,should update your feature branch with new updated code from development branch in one scenario –   
+The rule of thumb is keep code pulling (such as ```git pull```) as frequent as possible.  
+At minimum, do it in one scenario –   
 i) After commiting the code and before pushin changes (The Commit > Pull > Push steps) as abovementioned in section 1.3-A.  
 
 And, it is highly recommended you also pull new changes:  
