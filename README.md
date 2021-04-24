@@ -102,25 +102,26 @@ git rebase develop
 but a word of warning, rebase is best used on local feature branches that haven&#39;t been pushed, see [atlassian.com/git/tutorials/…](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing)
 
 
-## 5) Advanced Integration
+## 5) Advanced Strategy (to be confirmed)
 
+1 Using rebase
 After using ```git commit -m "msg"``` to commit, pull remote master branch to local master branch.   To do this, type:   
   ```git pull --rebase --preserve-merges```
   
  This makes sure new local commits that hasn&#39;t been uploaded will be combined on top of the master branch codes,   
  so that the local commits will not be overwritten. 
+ 
+ Never use rebase here, as the target merge branch is public. Use merge instead to avoid tangling codes from two branches
 
+2 CI / CD Workflow
 1. Set a Github action prehook that will automatically do linting, unit testing, integration testing and test if it can build in local/remote environment. They pull request can be uploaded only if everything pass.  
 2. git merge feature master to merge feature branch new codes to master locally.  
+3. On the development branch, integration testing can be done daily with a cron job.
+4. 
+Optimally, there should be a continuous integration tool to automate, such as rultor.com
 
-Never use rebase here, as the target merge branch is public. Use merge instead to avoid tangling codes from two branches
 
- 
-Optimally, there should be a continuous integration tool to automate step 1 - 5, such as rultor.com
-
-On the development branch, integration testing has to be done daily with a cron job.
-
-## 6) Delivery, Deploy and Release
+## 6) Delivery, Deploy and Release (to be confirmed)
 
 Once dev branch gather enough features, the dev branch will be fast-forward merged into the release branch. The release branch code is delivered to the staging server. End-to-end testing and acceptance test are done by beta testers or QA team.
 
