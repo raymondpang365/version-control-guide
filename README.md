@@ -19,7 +19,7 @@ Main branch: This is used for production. If end-to-end testing and acceptance t
 
 Test-driven development is adopted. TDD means you have to first know the purpose of the code, then write the integration test and unit test. After that, write the actual code until all the tests pass.
 
-Every time you write a feature, commit the code. Each commit is not have more than 250 lines change.
+Every time you write a feature, commit the code. 
 
 But before commit the code, you have to run and pass the unit test.
 
@@ -34,6 +34,9 @@ i) Make sure you are in your personal branch:
 ```git checkout meow-1 ```.  
 ii) Push to your remote personal branch:  
 ```git push origin meow-1```.  
+  
+Keep pull requests small and frequent.  
+Each pull requests should not have more than 250 lines change.
 
 ### 3B) Making sure CI is successful.   
 A github workflow should have been set up.  
