@@ -2,8 +2,6 @@ Cheat sheet guidelines for developers wanting to get better at version control.
 
 This following guideline is written in the perspective of Agile Project Lifecycle Methodology,  aiming to increase productivity, speed and quality of the project.  
 
-This guide assumes you are using Github. But if you are using other platforms, most of the following guides should still be applicable to you.
-
 # Chapter 1 - Basic Guide
 
 ## 1.1) Gitflow
@@ -63,12 +61,11 @@ Each pull requests should not have more than 250 lines change.
 ### 1.3-C) Making sure CI is successful.   
 A github workflow should be set up for a project.  
 I will not cover the detail of how to setting up a CI workflow in this guide . There are so many tools out there that can create the CI workflow.
-Go to Actions tab in the repository. 
-Find that you are running a CI workflow.  
+If you have set up the CI workflow properly, and if you are using Github,  you can navigate to Actions tab of your repo and find that you are runnng a CI workflow automatically after pushing
 Make sure it is successful (green dot/ green tick) before making a pull request. 
 
 Successful? Go to Pull requests.  
-Click "New Pull Request"
+If you are using github, navigate to "Pull requests" tab and click "New Pull Request"
 
 ### 1.3-D) Making sure there is no conflict 
 
