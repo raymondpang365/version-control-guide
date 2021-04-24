@@ -115,11 +115,9 @@ After using ```git commit -m "msg"``` to commit, pull remote master branch to lo
  Never use rebase here, as the target merge branch is public. Use merge instead to avoid tangling codes from two branches
 
 2 CI / CD Workflow
-1. Set a Github action prehook that will automatically do linting, unit testing, integration testing and test if it can build in local/remote environment. They pull request can be uploaded only if everything pass.  
-2. git merge feature master to merge feature branch new codes to master locally.  
-3. On the development branch, integration testing can be done daily with a cron job.
-4. 
-Optimally, there should be a continuous integration tool to automate, such as rultor.com
+1. Set a Github action prehook that will automatically do linting, unit testing, integration testing and test if it can build in local/remote environment. They pull request can be uploaded only if everything pass.   
+2. On the development branch, integration testing can be done daily with a cron job.
+3. Optimally, there should be a continuous integration tool to automate, such as rultor.com
 
 
 ## 6) Delivery, Deploy and Release (to be confirmed)
