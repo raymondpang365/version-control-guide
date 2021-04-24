@@ -64,7 +64,7 @@ Find that you are running a CI workflow.
 Make sure it is successful (green dot/ green tick) before making a pull request. 
 
 Successful? Go to Pull requests.  
-Click "New Pull Request. 
+Click "New Pull Request"
 
 ### 1.3-D) Making sure there is no conflict 
 
