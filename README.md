@@ -104,10 +104,7 @@ but a word of warning, rebase is best used on local feature branches that haven&
 
 ## 5) Advanced Integration
 
-Only when the feature is fully implemented, the dev have to
-
- Commit your code locally. Type ```git commit -m "msg"``` to commit
- pull remote master branch to local master branch. To do this, type:   
+After using ```git commit -m "msg"``` to commit, pull remote master branch to local master branch.   To do this, type:   
   ```git pull --rebase=preserve --rebase=preserve```
   
  This maakes sure new local commits that hasn&#39;t been uploaded will be combined on top of the master branch codes,   
