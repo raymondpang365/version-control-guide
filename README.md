@@ -27,6 +27,17 @@ But before commit the code, you have to run and pass all the unit tests.
 
 Use ```git add .``` and ```git commit -m "useful message"``` to commit
 After that, it is a very good habit to pull the code first.
+
+After using ```git commit -m "msg"``` to commit, pull remote master branch to local master branch.   To do this, type:   
+  ```git pull --rebase --preserve-merges```
+  
+ This makes sure new local commits that hasn&#39;t been uploaded will be combined on top of the master branch codes,   
+ so that the local commits will not be overwritten. 
+ 
+(To use an alternative strategy with git stash, see section 5)
+
+Never use rebase here, as the target merge branch is public.  Use merge instead to avoid tangling codes from two branches
+
 After pulling, there would be some merge conflicts.
 This is normal. Do not panic.
 Go to section **"3D) Handling Merge Conflict"** to see how to resolve Merge Conflect
@@ -122,17 +133,28 @@ git rebase develop
 but a word of warning, rebase is best used on local feature branches that haven&#39;t been pushed, see [atlassian.com/git/tutorials/…](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing)
 
 
-## 5) Advanced Strategy (to be confirmed)
+## 5) Advanced Strategy (to be confirmed)  
 
-1 Using rebase. 
-  
-After using ```git commit -m "msg"``` to commit, pull remote master branch to local master branch.   To do this, type:   
-  ```git pull --rebase --preserve-merges```
-  
- This makes sure new local commits that hasn&#39;t been uploaded will be combined on top of the master branch codes,   
- so that the local commits will not be overwritten. 
+Stash your local changes:  
+
+```git stash```      
+Update the branch to the latest code  
+
+```git pull```    
+Merge your local changes into the latest code:  
+
+```git stash apply```  
+Add, commit and push your changes. 
+```
+git add
+git commit
+git push
+```  
+In my experience this is the path to least resistance with Git (on the command line anyway).   
+
+
  
- Never use rebase here, as the target merge branch is public. Use merge instead to avoid tangling codes from two branches
+
 
 2 CI / CD Workflow
 1. Set a Github action prehook that will automatically do linting, unit testing, integration testing and test if it can build in local/remote environment. They pull request can be uploaded only if everything pass.   
