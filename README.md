@@ -14,19 +14,28 @@ Release branch: This is used for staging. Once development branch gather enough 
 
 Main branch: This is used for production. If end-to-end testing and acceptance test pass, it will be fast-forward merged to this branch.
 
-## 2) Pushing changes, Pull request, Handling Merge conflict
 
-### 2A) Pushing changes 
+## 2) Test-driven development
+
+Test-driven development is adopted. TDD means you have to first know the purpose of the code, then write the integration test and unit test. After that, write the actual code until all the tests pass.
+
+Every time you write a feature, commit the code. Each commit is not have more than 250 lines change.
+
+But before commit the code, you have to run and pass the unit test.
+
+## 3) Pushing changes, Pull request, Handling Merge conflict
+
+### 3A) Pushing changes 
 
 Never push your code to dev branch directly.  
 Push your code from your local <personal_name> branch to your remote <personal_name> branch. 
-For example, If your name is meow. 
-i) Make sure you are in your personal branch:  
-```git checkout meow-1 ```
+For example, If your name is meow.   
+i) Make sure you are in your personal branch:    
+```git checkout meow-1 ```.  
 ii) Push to your remote personal branch:  
-```git push origin meow-1```
+```git push origin meow-1```.  
 
-### 2B) Making sure CI is successful.   
+### 3B) Making sure CI is successful.   
 A github workflow should have been set up.  
 Go to Actions tab in the repository. 
 Find that you are running a CI workflow.  
@@ -35,7 +44,7 @@ Make sure it is successful (green dot/ green tick) before making a pull request.
 Go to Pull requests.  
 Click "New Pull Request. 
 
-### 2C) Handling Merge Conflict
+### 3C) Handling Merge Conflict
 
 If you see the message:  
 "Can’t automatically merge. Don’t worry, you can still create the pull request."  
@@ -60,14 +69,14 @@ After resolving the issues, commit your change:
 Then, do again:  
 ```git push origin meow-1```
   
-Remember, as I said in section 3A, you have to be patient check to make sure the githab action shows the CI/CD is a success before creating a pull request.  
+Remember, as I said in section 3B, you have to be patient check to make sure the githab action shows the CI/CD is a success before creating a pull request.  
 If the CI/CD is successful, create a pull request again.   
 Since you have resolved the conflict, it should let you automatically merge this time.  
 Wait for a code reviewer if you want to ask for advice or approval.  
 After merging the branch, tell your team about it with a communication software that your team choose to use. 
 
 
-## 3) Keeping local code up to date
+## 4) Keeping local code up to date
 
 There are two scenarios you should update your feature branch with new updated code from development branch –   
 i) Before Coding.  
@@ -92,13 +101,6 @@ git rebase develop
 ```
 but a word of warning, rebase is best used on local feature branches that haven&#39;t been pushed, see [atlassian.com/git/tutorials/…](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing)
 
-## 4) Test-driven development
-
-Test-driven development is adopted. TDD means you have to first know the purpose of the code, then write the integration test and unit test. After that, write the actual code until all the tests pass.
-
-Every time you write a feature, commit the code. Each commit is not have more than 250 lines change.
-
-But before commit the code, you have to run and pass the unit test.
 
 ## 5) Advanced Integration
 
