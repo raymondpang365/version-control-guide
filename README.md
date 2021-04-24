@@ -29,7 +29,7 @@ Use ```git add .``` and ```git commit -m "useful message"``` to commit
 After that, it is a very good habit to pull the code first.
 After pulling, there would be some merge conflicts.
 These are normal. Do not panic.
-Go to section [#3C)-Handling-Merge-Conflict]3D to see how to resolve Merge Conflect
+Go to section "3D)Handling Merge Conflict" to see how to resolve Merge Conflect
 
 ### 3A) Pushing changes 
 
