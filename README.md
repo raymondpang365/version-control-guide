@@ -2,7 +2,7 @@ Cheat sheet guidelines for developers wanting to get better at version control.
 
 This following guideline is written in the perspective of Agile Project Lifecycle Methodology,  aiming to increase productivity, speed and quality of the project.
 
-# 1) Basic Guide
+# Chapter 1 - Basic Guide
 
 ## 1.1) Gitflow
 
@@ -142,7 +142,7 @@ If there is something that has to be changed, the team will have to repeat the a
 
 If end-to-end testing and acceptance test pass, the release branch will be fast-forward merged into the main branch and at the same time automatically deployed for production server / ready for users to install.
 
-# 2) Advanced Guide 
+# Chatper 2 - Advanced Guide 
 
 ## 2.1) Using git stash in merging (to be confirmed)  
 
@@ -171,7 +171,7 @@ git push
 
 
 
-## 3) Common Git F&Q
+## Chatper 3 - Common Git F&Q
 
 **Q: What is the difference between Merge vs Rebase?**
 
