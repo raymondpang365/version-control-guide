@@ -1,3 +1,5 @@
+Cheat sheet guidelines for developers wanting to get better at version control.
+
 ## 1) CI / CD Guide
 
 This following workflow suggestion is in regards to agile project lifecycle.
