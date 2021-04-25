@@ -137,7 +137,7 @@ git rebase develop
 ```
 but a word of warning, rebase is best used on local feature branches that haven&#39;t been pushed, see [atlassian.com/git/tutorials/…](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing)
 
-## 1.5) Delivery, Deploy and Release (to be confirmed)
+## 1.5) Delivery, Deploy and Release
 
 Once dev branch gather enough features, the dev branch will be fast-forward merged into the release branch.  
 The release branch code is delivered to the staging server. End-to-end testing and acceptance test are done by beta testers or QA team.
