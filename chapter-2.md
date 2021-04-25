@@ -8,13 +8,15 @@ This following guideline is written in the perspective of Agile Project Lifecycl
 
 Gitflow adopts the methodology of &quot;long live master, short live feature branch&quot;.
 
-*Feature branch*: This is a private branch. For every feature, a new feature has to be created. The branch name would be in the format of <dev_name>/<feature_name>. Feature branch is short lived.
+*Feature branch*: (or personal branch) This is a private branch. For every feature, a new feature branch has to be created.  
+The branch name would be in the format of <dev_name>/<feature_name> or simply <dev_name>-<issue_id>.  
+Feature branch is short lived.
 
-*Dev branch*: This is a public branch and the common source of truth for the up to date development. The code of this branch must pass all the unit test and integrated test.
+*Dev branch*: This is a public branch and the common source of truth for the most up-to-date codes. The code of this branch must pass all the unit test and integrated test.
 
 *Release branch*:  When development branch gather enough features, it will be fast-forward merged to Release Branch. Release branch This is used for staging.
 
-*Main branch*: If end-to-end testing and acceptance test pass for release branch, it will be fast-forward merged to this branch. Main branch is used for production
+*Master branch*: If end-to-end testing and acceptance test pass for release branch, it will be fast-forward merged to this branch. Master branch is used for production
 
 
 ## 2.2) Test-driven development
@@ -153,7 +155,7 @@ According to the description of the Git Flow, the release branch is a short live
 
 If there is something that has to be changed in the release, the team will have to make the change in hotfix branch.  
 
-If end-to-end testing and acceptance test pass, the release branch will be fast-forward merged into the main branch;  
+If end-to-end testing and acceptance test pass, the release branch will be fast-forward merged into the master branch;  
 And at the same time, automatically deployed for production server / ready for users to install.
 
 
