@@ -42,27 +42,30 @@ i) After commiting the code and before pushin changes (The Commit > Pull > Push 
 
 
 To do this, types the following commands:
-```
-git checkout dev
-git pull origin dev
-git checkout meow-1
-git merge dev
-```
+Checkout dev branch:  
+```git checkout dev```  
+Pull from remote dev branch to local dev branch:  
+```git pull origin dev```
+Checkout personal branch:  
+```git checkout meow-1```.  
+Include changes of dev branch into personal branch:  
+```git merge dev```.  
+
 This is very important. Otherwise, when somebody pushed new commit to the remote repository, the local repo would not be in sync with the remote repo. If new changes are made in working directory without keeping it updated first, conflicts easily occur.
-
-After using ```git commit -m "msg"``` to commit, use ```git pull remote dev``` branch to local dev branch.   
-  ```git pull origin dev --rebase --preserve-merges```.  
-This pull changes from remote dev branch to your local dev branch.
-
+___
+**Advanced section:**
   
-``` --rebase --preserve-merges``` This makes sure new local commits that hasn&#39;t been uploaded will be combined on top of the master branch codes,   
- so that the local commits will not be overwritten. 
+*To make your code cleaner, you can use another merging strategy, such as ```git pull origin dev --rebase --preserve-merges```. 
+``` --rebase --preserve-merges``` makes sure new local commits that hasn&#39;t been uploaded will be combined on top of the master branch codes,   
+ so that the local commits will not be overwritten.   
+**!!!Never use ```rebase``` without ```preserve-merges```!!!, otherwise, it will cause tangling codes among two branches.** 
+___
+**Another note:**
 
-Never use ```rebase``` without ```preserve merges```, otherwise, it will cause tangling codes among two branches.   
-
-It is also highly recommended you also pull new changes immediately after there are approved pull requests.  
-However, remember to **commit or stash** your code before pulling, otherwise all your local changes will be lost!  
-  
+*It is also highly recommended you also pull new changes immediately after there are approved pull requests.  
+However, remember to **```git commit``` or ```git stash```** your code before pulling, otherwise all your local changes will be lost!
+(To learn about git stash, go to advanced guide 2.1.2)*
+___
 After pulling, there would be some merge conflicts.
 This is normal. Do not panic.
 Go to section **"1.3.5) Handling Merge Conflict"** to see how to resolve Merge Conflect
