@@ -107,15 +107,19 @@ Go to the next section *"2.3.6) Handling Merge Conflict"* to see how to resolve 
 
 ### 2.3.6) Handling Merge Conflict
 
-Go to your terminal, type:  
+Merge the most updated codes from dev to your local feature branch,  
+as I have mentioned in 2.3.2
 ```
 git checkout dev
 git pull origin dev
 git checkout meow-1
 git merge dev
 ```
-Now, You can see whether there are conflicted files  
-```git diff --name-only --diff-filter=U``` tot show all conflicted files
+___
+
+Now, You may find there are merge conflicts.  
+You can show all the conflicted files by typing:    
+```git diff --name-only --diff-filter=U```
   
 Or, I recommend you use IDE such as VS Code or IntelliJ, because viewing unresolved conflicts would be a lot easier.  
 Some IDE, such as IntelliJ can even let you click a buton - "take yours" or "take theirs" - to resolve each conflicting file.  
