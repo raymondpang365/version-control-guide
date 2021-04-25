@@ -136,6 +136,7 @@ git rebase develop
 ```
 but a word of warning, rebase is best used on local feature branches that haven&#39;t been pushed, see [atlassian.com/git/tutorials/…](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing)
 
-[2] It is also highly recommended you also pull new changes immediately after there are approved pull requests.  
+[2] Make your your development is still relevant to other collaborators' effort, so you can avoid wasted efforts or merge conflicts.    
+To achieve that, it is highly recommended you also pull new changes immediately after there are approved pull requests.  
 However, remember to **```git commit``` or ```git stash```** your code before pulling, otherwise all your local changes will be lost!
 
