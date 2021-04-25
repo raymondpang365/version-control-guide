@@ -28,21 +28,44 @@ Before commiting the code, you have to run and make sure you pass all the unit t
 
 ### 1.3.1) Commiting changes locally
 
-Use ```git add .``` and ```git commit -m "useful message"``` to commit.   
+
+Use ```git add . -A``` to add all files to staged area
+Use ```git commit -m "useful message"``` to commit all staged files.   
   
 **After that, it is a very good habit to first pull the code.**  
 
-After using ```git commit -m "msg"``` to commit, pull remote master branch to local master branch.   To do this, type:   
-  ```git pull --rebase --preserve-merges```. 
+## 1.4) Keeping local code up to date
+
+The rule of thumb is keep code pulling (such as ```git pull```) as frequent as possible.  
+At minimum, do it in one scenario –   
+i) After commiting the code and before pushin changes (The Commit > Pull > Push steps) as abovementioned in section 1.3.1.  
+
+
+To do this, types the following commands:
+```
+git checkout dev
+git pull origin dev
+git checkout meow-1
+git merge dev
+```
+This is very important. Otherwise, when somebody pushed new commit to the remote repository, the local repo would not be in sync with the remote repo. If new changes are made in working directory without keeping it updated first, conflicts easily occur.
+
+After using ```git commit -m "msg"``` to commit, use ```git pull remote dev``` branch to local dev branch.   
+  ```git pull origin dev --rebase --preserve-merges```.  
+This pull changes from remote dev branch to your local dev branch.
+
   
 ``` --rebase --preserve-merges``` This makes sure new local commits that hasn&#39;t been uploaded will be combined on top of the master branch codes,   
  so that the local commits will not be overwritten. 
 
 Never use ```rebase``` without ```preserve merges```, otherwise, it will cause tangling codes among two branches.   
 
+It is also highly recommended you also pull new changes immediately after there are approved pull requests.  
+However, remember to **commit or stash** your code before pulling, otherwise all your local changes will be lost!  
+  
 After pulling, there would be some merge conflicts.
 This is normal. Do not panic.
-Go to section **"1.3-E) Handling Merge Conflict"** to see how to resolve Merge Conflect
+Go to section **"1.3.5) Handling Merge Conflict"** to see how to resolve Merge Conflect
 
 ( To learn about an alternative strategy, see section 2.1 in the advanced guide )
 
@@ -108,24 +131,7 @@ Wait for a code reviewer if you want to ask for advice or approval.
 After merging the branch, tell your team about it.  
 
 
-## 1.4) Keeping local code up to date
 
-The rule of thumb is keep code pulling (such as ```git pull```) as frequent as possible.  
-At minimum, do it in one scenario –   
-i) After commiting the code and before pushin changes (The Commit > Pull > Push steps) as abovementioned in section 1.3-A.  
-
-And, it is highly recommended you also pull new changes:  
-i) Before you start your day of coding job. 
-ii) Immediately after there are approved pull requests from other team members. 
-
-To do this, types the following commands:
-```
-git checkout dev
-git pull origin dev
-git checkout my-feature-branch
-git merge dev
-```
-This is very important. Otherwise, when somebody pushed new commit to the remote repository, the local repo would not be in sync with the remote repo. If new changes are made in working directory without keeping it updated first, conflicts easily occur.
 
 **Advanced:**
 
