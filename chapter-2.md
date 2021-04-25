@@ -110,7 +110,7 @@ Go to the next section *"2.3.6) Handling Merge Conflict"* to see how to resolve 
 Go to your terminal, type:  
 ```
 git checkout dev
-git pull
+git pull origin dev
 git checkout meow-1
 git merge dev
 ```
