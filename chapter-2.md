@@ -31,18 +31,21 @@ Before commiting the code, you have to run and make sure you pass all the unit t
 ## 2.3) Pushing changes, Pull request, Handling Merge conflict
 
 
-<span style="color:blue">**3 Things Never to do**</span>
-1. **Never** directly ```git push``` directly to Master, Release or Develop branch
-2. **Never** edit, add, remove any files directly in Master branch or Develop branch in web editor
-3. **Never** use ``--force`` or ```-F``` argument in any scenarios. 
-(Seek helps from your teammates if you are stuck. Because there must be ways to do your task without using ```--force```)
+ **3 Things Never to do**   
+🛑1. **Never** directly ```git push``` directly to Master, Release or Develop branch.  
+🛑2. **Never** edit, add, remove any files directly in Master branch or Develop branch in web editor.  
+🛑3. **Never** use ``--force`` or ```-F``` argument in any scenarios.  
+(Seek helps from your teammates if you are stuck. Because there must be ways to do your task without using ```--force```). 
 
-___
-!!!Doing **any of the above** can cause at least loss in productivity.  
-at most critical software error in real live products,  
-which means:
+___ 
+  
+❗❗❗Doing **any of the above** can cause at least loss in productivity. ❗❗❗
+at most critical software error in real live products,    
+which means:   
 **FAILING** the whole project, whole **COMPANY** and your whole **CAREER**,  
-**YOU MAY HAVE TO BEAR LEGAL RESPONSIBILITY of the COMPANY LOSS in regards to your actions**
+❗❗❗**YOU MAY HAVE TO BEAR LEGAL RESPONSIBILITY of the COMPANY LOSS in regards to your actions**❗❗❗
+
+  
 ___
 
 ### Step 1) Commiting changes locally
