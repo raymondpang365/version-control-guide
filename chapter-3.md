@@ -17,9 +17,16 @@ git add
 git commit
 git push
 ```  
-  
+## 3.2) If commits are made locally on DEV branch
 
-## 3.2) CI / CD Automation Tool
+Use```git pull origin dev --rebase --preserve-merges```. 
+``` --rebase --preserve-merges``` makes sure new local commits that hasn&#39;t been uploaded will be combined on top of the master branch codes,   
+ so that the local commits will not be overwritten.   
+**!!!Never use ```rebase``` without ```preserve-merges```!!!, otherwise, it will cause tangling codes among two branches.**
+
+
+
+## 3.3) CI / CD Automation Tool
 1. Set a Github action prehook that will automatically do linting, unit testing, integration testing and test if it can build in local/remote environment. They pull request can be uploaded only if everything pass.   
 2. On the development branch, integration testing can be done daily with a cron job.
 3. Optimally, there should be a continuous integration tool to automate, such as rultor.com
