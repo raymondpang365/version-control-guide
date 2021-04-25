@@ -30,6 +30,14 @@ Before commiting the code, you have to run and make sure you pass all the unit t
 
 ## 2.3) Pushing changes, Pull request, Handling Merge conflict
 
+
+**3 Things Never to do**
+1. **Never** directly ```git push``` directly to Master, Release or Develop branch
+2. **Never** edit, add, remove any files directly in Master branch or Develop branch in web editor
+3. **Never** use ``--force`` or ```-F``` argument
+
+___
+
 ### Step 1) Commiting changes locally
 
 
@@ -46,8 +54,9 @@ types the following commands:
 ___
 1. Checkout dev branch:  
 ```git checkout dev```  
-2. Pull<sup>[1]</sup> from remote dev branch to local dev branch:  
-```git pull origin dev```
+2. Pull<sup>[1]</sup> from remote dev branch to local dev branch  
+(using ```--ff-only``` is optional but recommended to assert there is no diverged merge is happening):  
+```git pull origin dev --ff-only```
 3. Checkout personal branch:  
 ```git checkout meow-1```.  
 4. Include changes of dev branch into personal branch:  
