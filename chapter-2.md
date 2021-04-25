@@ -39,14 +39,16 @@ Then, use ```git commit -m "useful message"``` to commit all staged files.
 
 After commiting the code and before pushin changes,  
 types the following commands:  
-Checkout dev branch:  
+___
+1. Checkout dev branch:  
 ```git checkout dev```  
-Pull from remote dev branch to local dev branch:  
+2. Pull from remote dev branch to local dev branch:  
 ```git pull origin dev```
-Checkout personal branch:  
+3. Checkout personal branch:  
 ```git checkout meow-1```.  
-Include changes of dev branch into personal branch:  
+4. Include changes of dev branch into personal branch:  
 ```git merge dev```.  
+___
 
 This is very important. Otherwise, when somebody pushed new commit to the remote repository, the local repo would not be in sync with the remote repo. If new changes are made in working directory without keeping it updated first, conflicts easily occur.
 ___
