@@ -46,7 +46,7 @@ types the following commands:
 ___
 1. Checkout dev branch:  
 ```git checkout dev```  
-2. Pull<sup>1</sup> from remote dev branch to local dev branch:  
+2. Pull<sup>[1]</sup> from remote dev branch to local dev branch:  
 ```git pull origin dev```
 3. Checkout personal branch:  
 ```git checkout meow-1```.  
