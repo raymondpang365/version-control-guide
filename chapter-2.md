@@ -35,7 +35,7 @@ Before commiting the code, you have to run and make sure you pass all the unit t
 🛑1. **Never** directly ```git push``` directly to Master, Release or Develop branch.  
 🛑2. **Never** edit, add, remove any files directly in Master, Release or Develop branch in web editor.  
 🛑3. **Never** use ``--force`` or ```-F``` argument in any scenarios.  
-(Seek helps from your teammates if you are stuck. Because there must be ways to do your task without using ```--force```). 
+(Seek helps from your teammates if you are stuck. **NEVER** try to solve problems with ```--force```). 
 
 ___ 
   
