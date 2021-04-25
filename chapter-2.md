@@ -41,10 +41,8 @@ ___
 !!!Doing **any of the above** can cause at least loss in productivity.  
 at most critical software error in real live products,  
 which means:
-**FAILING** the whole project, whole **COMPANY** and your whole **CAREER**,
-**YOU HAVE TO BEAR LEGAL RESPONSIBILITY of the COMPANY LOSS**
-May get you **FIRED**, and very hard to get **new jobs**.
-
+**FAILING** the whole project, whole **COMPANY** and your whole **CAREER**,  
+**YOU MAY HAVE TO BEAR LEGAL RESPONSIBILITY of the COMPANY LOSS in regards to your actions**
 ___
 
 ### Step 1) Commiting changes locally
