@@ -9,8 +9,10 @@ This following guideline is written in the perspective of Agile Project Lifecycl
 Gitflow adopts the methodology of &quot;long live master, short live feature branch&quot;.
 
 *Feature branch*: (or personal branch) This is a private branch. For every feature, a new feature branch has to be created.  
-The branch name would be in the format of <dev_name>/<feature_name> or simply <dev_name>-<issue_id>.  
-Feature branch is short lived.
+Branch name does not matter. However, to make it easier to be recognized. It is better to follow a convention.
+For example it can be in the format of <dev_name>/<feature_name>, or simply <dev_name>-<issue_id>, or <dev_name>-<incremental id>.  
+For example, if you name is Meow. And, ifthis is your first feature branch, you can name it meow-1, and so on.
+Feature branch is short lived, which means after the remote feature branch merged into the remote dev branch, feature branch can be safely deleted.
 
 *Dev branch*: This is a public branch and the common source of truth for the most up-to-date codes. The code of this branch must pass all the unit test and integrated test.
 
