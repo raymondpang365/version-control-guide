@@ -55,8 +55,8 @@ ___
 ___
 
 These steps will included all the most updated codes in the team to your personal branch.  
-After pulling, there would be some merge conflicts.  
-This is normal. Do not panic.  
+After pulling, there might be some merge conflicts.  
+This is normal<sup>[2]</sup>. Do not panic.  
 Go to the next section to see how to resolve Merge Conflict.  
 
 
@@ -135,8 +135,7 @@ git pull --all
 git rebase develop
 ```
 but a word of warning, rebase is best used on local feature branches that haven&#39;t been pushed, see [atlassian.com/git/tutorials/…](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing)
-___
 
-2. It is also highly recommended you also pull new changes immediately after there are approved pull requests.  
+[2] It is also highly recommended you also pull new changes immediately after there are approved pull requests.  
 However, remember to **```git commit``` or ```git stash```** your code before pulling, otherwise all your local changes will be lost!
-___
+
