@@ -29,8 +29,8 @@ Before commiting the code, you have to run and make sure you pass all the unit t
 ### 2.3.1) Commiting changes locally
 
 
-Use ```git add . -A``` to add all files to staged area
-Use ```git commit -m "useful message"``` to commit all staged files.   
+Use ```git add . -A``` to add all files to staged area.  
+Then, use ```git commit -m "useful message"``` to commit all staged files.   
   
 **After that, it is a very good habit to first pull the code.**  
 
