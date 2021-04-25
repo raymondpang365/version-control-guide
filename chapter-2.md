@@ -36,12 +36,9 @@ Then, use ```git commit -m "useful message"``` to commit all staged files.
 
 ### 2.3.2) Keeping local code up to date
 
-The rule of thumb is keep code pulling (such as ```git pull```) as frequent as possible.  
-At minimum, do it in one scenario –   
-After commiting the code and before pushin changes, as abovementioned in section 1.3.1.  
 
-
-To do this, types the following commands:
+After commiting the code and before pushin changes,  
+types the following commands:  
 Checkout dev branch:  
 ```git checkout dev```  
 Pull from remote dev branch to local dev branch:  
