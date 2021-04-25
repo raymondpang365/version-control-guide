@@ -63,7 +63,7 @@ types the following commands:
 ___
 1. Checkout dev branch:  
 ```git checkout dev```  
-2. Pull<sup>[1]</sup> from remote dev branch to local dev branch  
+2. Pull from remote dev branch to local dev branch  
 (using ```--ff-only``` is optional but recommended to assert there is no diverged merge is happening):  
 ```git pull origin dev --ff-only```
 3. Checkout personal branch:  
@@ -74,7 +74,7 @@ ___
 
 These steps will included all the most updated codes in the team to your personal branch.  
 After pulling, there might be some merge conflicts.  
-This is normal<sup>[2]</sup>. Do not panic.  
+This is normal<sup>[1]</sup>. Do not panic.  
 Go to the next section to see how to resolve Merge Conflict.  
 
 
@@ -141,22 +141,8 @@ And at the same time, automatically deployed for production server / ready for u
 
 
 ## Footnotes
-  
-[1]. To make your code cleaner, you can use another merging strategy, such as ```git pull origin dev --rebase --preserve-merges```. 
-``` --rebase --preserve-merges``` makes sure new local commits that hasn&#39;t been uploaded will be combined on top of the master branch codes,   
- so that the local commits will not be overwritten.   
-**!!!Never use ```rebase``` without ```preserve-merges```!!!, otherwise, it will cause tangling codes among two branches.**
 
-
-If you are lazy, you can also use
-```
-git checkout feature/foo
-git pull --all
-git rebase develop
-```
-but a word of warning, rebase is best used on local feature branches that haven&#39;t been pushed, see [atlassian.com/git/tutorials/…](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing)
-
-[2] Make your your development is still relevant to other collaborators' effort, so you can avoid wasted efforts or merge conflicts.    
+[1] Make your your development is still relevant to other collaborators' effort, so you can avoid wasted efforts or merge conflicts.    
 To achieve that, it is highly recommended you also pull new changes immediately after there are approved pull requests.  
 However, remember to **```git commit``` or ```git stash```** your code before pulling, otherwise all your local changes will be lost!
 
