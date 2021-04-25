@@ -90,7 +90,7 @@ If you are using Github,  you can navigate to Actions tab of your repo and find 
 Make sure it is successful (green dot/ green tick) before making a pull request.  
 Then go to Pull requests. Navigate to "Pull requests" tab and click "New Pull Request"
 
-### 2.3.5) Making sure there is no conflict 
+### 2.3.5) "Can’t automatically merge" in pull request
 
 You go to a page which compares and tell you whether you can automatically merge.
 
