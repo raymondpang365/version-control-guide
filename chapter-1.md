@@ -2,7 +2,7 @@
 
 ## 1.1) The common misunderstanding of branch and commit
 
-## 1.2 Difference between Working directory, Staging area & Commit history
+## 1.2) Difference between Working directory, Staging area & Commit history
 
 ## 1.3) What is the difference between Merge vs Rebase?
 
