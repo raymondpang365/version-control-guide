@@ -103,10 +103,11 @@ For example, in github, there may be a message
 Do not listen to it saying "Don't worry". It is always better to be careful.   
 You should not create a pull request whenever it cannot automatically merge.   
     
-So, cancel and exit the merging action page, so you still do not create the pull request yet.  
+So, cancel and exit the merging action page, such tthat you still do not create the pull request yet.  
 Get back to your terminal, we will resolve it in the terminal instead of web editor.  
 
-Go back to Step 3 to see how to resolve Merge Conflect
+Repeat Step 3 to to resolve Merge Conflict.  
+Just repeat Step 3-6 until you can finally make a pull request without merge conflicts.
 
 ## 2.4) Delivery, Deploy and Release
 
