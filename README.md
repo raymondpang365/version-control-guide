@@ -12,9 +12,9 @@ Gitflow adopts the methodology of &quot;long live master, short live feature bra
 
 *Dev branch*: This is a public branch and the common source of truth for the up to date development. The code of this branch must pass all the unit test and integrated test.
 
-*Release branch*: This is used for staging. Once development branch gather enough features, it will be fast-forward merged to this branch.
+*Release branch*:  When development branch gather enough features, it will be fast-forward merged to Release Branch. Release branch This is used for staging.
 
-*Main branch*: This is used for production. If end-to-end testing and acceptance test pass, it will be fast-forward merged to this branch.
+*Main branch*: If end-to-end testing and acceptance test pass for release branch, it will be fast-forward merged to this branch. Main branch is used for production
 
 
 ## 1.2) Test-driven development
