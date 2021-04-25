@@ -2,9 +2,9 @@ Cheat sheet guidelines for developers wanting to get better at version control.
 
 This following guideline is written in the perspective of Agile Project Lifecycle Methodology,  aiming to increase productivity, speed and quality of the project.  
 
-# Chapter 1 - Basic Guide
+# Chapter 2 - Basic Guide
 
-## 1.1) Gitflow
+## 2.1) Gitflow
 
 Gitflow adopts the methodology of &quot;long live master, short live feature branch&quot;.
 
@@ -17,16 +17,16 @@ Gitflow adopts the methodology of &quot;long live master, short live feature bra
 *Main branch*: If end-to-end testing and acceptance test pass for release branch, it will be fast-forward merged to this branch. Main branch is used for production
 
 
-## 1.2) Test-driven development
+## 2.2) Test-driven development
 
 Test-driven development must be adopted. TDD means you have to first know the purpose of the code, then write the integration test and unit test. After that, write the actual code until all the tests pass.
 
 The baseline is that, at least write tests immidiately after you write the code.  
 Before commiting the code, you have to run and make sure you pass all the unit tests.
 
-## 1.3) Pushing changes, Pull request, Handling Merge conflict
+## 2.3) Pushing changes, Pull request, Handling Merge conflict
 
-### 1.3.1) Commiting changes locally
+### 2.3.1) Commiting changes locally
 
 
 Use ```git add . -A``` to add all files to staged area
@@ -34,7 +34,7 @@ Use ```git commit -m "useful message"``` to commit all staged files.
   
 **After that, it is a very good habit to first pull the code.**  
 
-### 1.3.2) Keeping local code up to date
+### 2.3.2) Keeping local code up to date
 
 The rule of thumb is keep code pulling (such as ```git pull```) as frequent as possible.  
 At minimum, do it in one scenario –   
@@ -72,7 +72,7 @@ Go to section **"1.3.5) Handling Merge Conflict"** to see how to resolve Merge C
 
 ( To learn about an alternative strategy, see section 2.1 in the advanced guide )
 
-### 1.3.3) Pushing changes 
+### 2.3.3) Pushing changes 
 
 > Never push your code to dev branch directly.  
   
@@ -86,13 +86,13 @@ ii) Push to your remote personal branch:
 It is a good practice to keep pull requests small and frequent, so that resolving merge conflict becomes easier.  
 Each pull requests should not have more than 250 lines change.
 
-### 1.3.4) Making sure CI is successful.   
+### 2.3.4) Making sure CI is successful.   
 A github workflow is set up for our project with *.github/workflow/ci.yml* file.  
 If you are using Github,  you can navigate to Actions tab of your repo and find that you are runnng a CI workflow automatically after pushing.
 Make sure it is successful (green dot/ green tick) before making a pull request.  
 Then go to Pull requests. Navigate to "Pull requests" tab and click "New Pull Request"
 
-### 1.3.5) Making sure there is no conflict 
+### 2.3.5) Making sure there is no conflict 
 
 You go to a page which compares and tell you whether you can automatically merge.
 
@@ -107,7 +107,7 @@ Get back to your terminal, we will resolve it in the terminal instead of web edi
 
 Go to the next section *"1.3-E) Handling Merge Conflict"* to see how to resolve Merge Conflect
 
-### 1.3.6) Handling Merge Conflict
+### 2.3.6) Handling Merge Conflict
 
 Go to your terminal, type:  
 ```
@@ -146,7 +146,7 @@ git rebase develop
 ```
 but a word of warning, rebase is best used on local feature branches that haven&#39;t been pushed, see [atlassian.com/git/tutorials/…](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing)
 
-## 1.4) Delivery, Deploy and Release
+## 2.4) Delivery, Deploy and Release
 
 According to the description of the Git Flow, the release branch is a short lived one. It may branch off of develop only, and merged into master. In theory, release should be merged back into develop after your release is done, and then be removed. The only thing that you should be merging into release is hotfix. 
 
