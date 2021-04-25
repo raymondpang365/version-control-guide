@@ -32,13 +32,13 @@ Before commiting the code, you have to run and make sure you pass all the unit t
 Use ```git add . -A``` to add all files to staged area.  
 Then, use ```git commit -m "useful message"``` to commit all staged files.   
   
-**After that, it is a very good habit to first pull the code.**  
+*After that, it is a very good habit to first pull the code, which I will explain in the next section* 
 
 ### 2.3.2) Keeping local code up to date
 
 The rule of thumb is keep code pulling (such as ```git pull```) as frequent as possible.  
 At minimum, do it in one scenario –   
-i) After commiting the code and before pushin changes (The Commit > Pull > Push steps) as abovementioned in section 1.3.1.  
+After commiting the code and before pushin changes, as abovementioned in section 1.3.1.  
 
 
 To do this, types the following commands:
