@@ -6,15 +6,15 @@ This following guideline is written in the perspective of Agile Project Lifecycl
 
 ## 1.1) Gitflow
 
-Gitflow adopts the methodology of &quot;long live master, short live feature branch&quot; (as known as gitflow),
+Gitflow adopts the methodology of &quot;long live master, short live feature branch&quot;.
 
-Feature branch: This is a private branch. For every feature, a new feature has to be created. The branch name would be in the format of <dev_name>/<feature_name>. Feature branch is short lived.
+*Feature branch*: This is a private branch. For every feature, a new feature has to be created. The branch name would be in the format of <dev_name>/<feature_name>. Feature branch is short lived.
 
-Dev branch: This is a public branch and the common source of truth for the up to date development. The code of this branch must pass all the unit test and integrated test.
+*Dev branch*: This is a public branch and the common source of truth for the up to date development. The code of this branch must pass all the unit test and integrated test.
 
-Release branch: This is used for staging. Once development branch gather enough features, it will be fast-forward merged to this branch.
+*Release branch*: This is used for staging. Once development branch gather enough features, it will be fast-forward merged to this branch.
 
-Main branch: This is used for production. If end-to-end testing and acceptance test pass, it will be fast-forward merged to this branch.
+*Main branch*: This is used for production. If end-to-end testing and acceptance test pass, it will be fast-forward merged to this branch.
 
 
 ## 1.2) Test-driven development
@@ -30,7 +30,7 @@ Before commiting the code, you have to run and make sure you pass all the unit t
 
 Use ```git add .``` and ```git commit -m "useful message"``` to commit.   
   
-After that, it is a very good habit to first pull the code.  
+**After that, it is a very good habit to first pull the code.**  
 
 After using ```git commit -m "msg"``` to commit, pull remote master branch to local master branch.   To do this, type:   
   ```git pull --rebase --preserve-merges```. 
@@ -48,7 +48,8 @@ Go to section **"1.3-E) Handling Merge Conflict"** to see how to resolve Merge C
 
 ### 1.3-B) Pushing changes 
 
-Never push your code to dev branch directly.  
+> Never push your code to dev branch directly.  
+  
 Push your code from your local <personal_name> branch to your remote <personal_name> branch. 
 For example, If your name is meow.   
 i) Make sure you are in your personal branch:    
@@ -60,29 +61,25 @@ It is a good practice to keep pull requests small and frequent, so that resolvin
 Each pull requests should not have more than 250 lines change.
 
 ### 1.3-C) Making sure CI is successful.   
-A github workflow should be set up for a project.  
-I will not cover the detail of how to setting up a CI workflow in this guide . There are so many tools out there that can create the CI workflow.
-If you have set up the CI workflow properly, and if you are using Github,  you can navigate to Actions tab of your repo and find that you are runnng a CI workflow automatically after pushing
-Make sure it is successful (green dot/ green tick) before making a pull request. 
-
-Successful? Go to Pull requests.  
-If you are using github, navigate to "Pull requests" tab and click "New Pull Request"
+A github workflow is set up for our project with *.github/workflow/ci.yml* file.  
+If you are using Github,  you can navigate to Actions tab of your repo and find that you are runnng a CI workflow automatically after pushing.
+Make sure it is successful (green dot/ green tick) before making a pull request.  
+Then go to Pull requests. Navigate to "Pull requests" tab and click "New Pull Request"
 
 ### 1.3-D) Making sure there is no conflict 
 
-You go to a page which compares and tell you whether you can automatica merge.
+You go to a page which compares and tell you whether you can automatically merge.
 
 For example, in github, there may be a message  
 "Can’t automatically merge. Don’t worry, you can still create the pull request."  
 
 Do not listen to it saying "Don't worry". It is always better to be careful.   
 You should not create a pull request whenever it cannot automatically merge.   
-  
     
 So, cancel and exit the merging action page, so you still do not create the pull request yet.  
 Get back to your terminal, we will resolve it in the terminal instead of web editor.  
 
-Go to the next section **"1.3-E) Handling Merge Conflict"** to see how to resolve Merge Conflect
+Go to the next section *"1.3-E) Handling Merge Conflict"* to see how to resolve Merge Conflect
 
 ### 1.3-E) Handling Merge Conflict
 
@@ -104,13 +101,11 @@ After resolving the issues, commit your change:
 Then, do again:  
 ```git push origin meow-1```
   
-Then, make sure CI/CD is a success  
-
-Then, try to create a pull request
+Then, make sure CI/CD is a success. After that, try to create a pull request
   
 It should let you automatically merge this time.  
 Wait for a code reviewer if you want to ask for advice or approval.  
-After merging the branch, tell your team about it with a communication software that your team has been using. 
+After merging the branch, tell your team about it.  
 
 
 ## 1.4) Keeping local code up to date
