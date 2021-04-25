@@ -38,10 +38,12 @@ Before commiting the code, you have to run and make sure you pass all the unit t
 (Seek helps from your teammates if you are stuck. Because there must be ways to do your task without using ```--force```)
 
 ___
-!!!Doing **any of the above** can cause at least loss in productivity. 
-and at most critical software error in real live products,  
-**failing** the whole project, whole company and your whole career,
-and getting everyone **fired** and no longer able to getting **new jobs**.
+!!!Doing **any of the above** can cause at least loss in productivity.  
+at most critical software error in real live products,  
+which means:
+**FAILING** the whole project, whole **COMPANY** and your whole **CAREER**,
+**YOU HAVE TO BEAR LEGAL RESPONSIBILITY of the COMPANY LOSS**
+May get you **FIRED**, and very hard to get **new jobs**.
 
 ___
 
