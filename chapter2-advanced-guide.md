@@ -1,4 +1,4 @@
-# Chatper 2 - Advanced Guide 
+# Chatper-2 - Advanced Guide 
 
 ## 2.1) Using git stash in merging (to be confirmed)  
 
