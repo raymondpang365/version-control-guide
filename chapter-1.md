@@ -12,8 +12,6 @@ Rebase does not preserve branches tree like a **cutting a branch with a scissor 
 
 Rebase is for combining private branches, not for public one.
 
-<img src="https://github.com/psfr937/version-control-guide/blob/master/merge_and_rebase_illustration.jpg?raw=true" width="300" />
-
 In rebase, no extra commits are created, but the exiting commits that you created are moved.
 
 In rebase you can find that the commits has changed the hash because the timeline is changed, the hash has to be recalculated.
