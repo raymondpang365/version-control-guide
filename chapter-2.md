@@ -119,8 +119,6 @@ And at the same time, automatically deployed for production server / ready for u
 
 
 ## Footnotes
-
-___
   
 [1]. To make your code cleaner, you can use another merging strategy, such as ```git pull origin dev --rebase --preserve-merges```. 
 ``` --rebase --preserve-merges``` makes sure new local commits that hasn&#39;t been uploaded will be combined on top of the master branch codes,   
