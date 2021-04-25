@@ -66,8 +66,7 @@ ___
 **Another note:**
 
 *It is also highly recommended you also pull new changes immediately after there are approved pull requests.  
-However, remember to **```git commit``` or ```git stash```** your code before pulling, otherwise all your local changes will be lost!
-(To learn about git stash, go to advanced guide 2.1.2)*
+However, remember to **```git commit``` or ```git stash```** your code before pulling, otherwise all your local changes will be lost!*
 ___
 
 ### 2.3.3) Pushing changes 
