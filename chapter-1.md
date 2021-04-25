@@ -1,8 +1,10 @@
 # Chapter 1 - Basic Concept
 
-## 1.1 Difference between Working directory, Staging area & Commit history
+## 1.1) The common misunderstanding of branch and commit
 
-## 1.2) What is the difference between Merge vs Rebase?
+## 1.2 Difference between Working directory, Staging area & Commit history
+
+## 1.3) What is the difference between Merge vs Rebase?
 
 Both are for integrating new work new commit that are on separate branches. There are always at least 2 branches in play.
 
