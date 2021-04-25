@@ -44,7 +44,7 @@ After pulling, there would be some merge conflicts.
 This is normal. Do not panic.
 Go to section **"1.3-E) Handling Merge Conflict"** to see how to resolve Merge Conflect
 
-(To learn about an alternative strategy, see section 2.1 in the advanced guide)
+( To learn about an alternative strategy, see section 2.1 in the advanced guide )
 
 ### 1.3.2) Pushing changes 
 
