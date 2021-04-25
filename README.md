@@ -34,7 +34,7 @@ Use ```git commit -m "useful message"``` to commit all staged files.
   
 **After that, it is a very good habit to first pull the code.**  
 
-## 1.4) Keeping local code up to date
+### 1.3.2) Keeping local code up to date
 
 The rule of thumb is keep code pulling (such as ```git pull```) as frequent as possible.  
 At minimum, do it in one scenario –   
@@ -72,7 +72,7 @@ Go to section **"1.3.5) Handling Merge Conflict"** to see how to resolve Merge C
 
 ( To learn about an alternative strategy, see section 2.1 in the advanced guide )
 
-### 1.3.2) Pushing changes 
+### 1.3.3) Pushing changes 
 
 > Never push your code to dev branch directly.  
   
@@ -86,13 +86,13 @@ ii) Push to your remote personal branch:
 It is a good practice to keep pull requests small and frequent, so that resolving merge conflict becomes easier.  
 Each pull requests should not have more than 250 lines change.
 
-### 1.3.3) Making sure CI is successful.   
+### 1.3.4) Making sure CI is successful.   
 A github workflow is set up for our project with *.github/workflow/ci.yml* file.  
 If you are using Github,  you can navigate to Actions tab of your repo and find that you are runnng a CI workflow automatically after pushing.
 Make sure it is successful (green dot/ green tick) before making a pull request.  
 Then go to Pull requests. Navigate to "Pull requests" tab and click "New Pull Request"
 
-### 1.3.4) Making sure there is no conflict 
+### 1.3.5) Making sure there is no conflict 
 
 You go to a page which compares and tell you whether you can automatically merge.
 
@@ -107,7 +107,7 @@ Get back to your terminal, we will resolve it in the terminal instead of web edi
 
 Go to the next section *"1.3-E) Handling Merge Conflict"* to see how to resolve Merge Conflect
 
-### 1.3.5) Handling Merge Conflict
+### 1.3.6) Handling Merge Conflict
 
 Go to your terminal, type:  
 ```
