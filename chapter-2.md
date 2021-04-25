@@ -31,7 +31,7 @@ Before commiting the code, you have to run and make sure you pass all the unit t
 ## 2.3) Pushing changes, Pull request, Handling Merge conflict
 
 
-**3 Things Never to do**
+<span style="color:blue">**3 Things Never to do**</span>
 1. **Never** directly ```git push``` directly to Master, Release or Develop branch
 2. **Never** edit, add, remove any files directly in Master branch or Develop branch in web editor
 3. **Never** use ``--force`` or ```-F``` argument in any scenarios. 
