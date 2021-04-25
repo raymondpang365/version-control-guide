@@ -139,11 +139,9 @@ but a word of warning, rebase is best used on local feature branches that haven&
 
 ## 1.5) Delivery, Deploy and Release
 
-Once dev branch gather enough features, the dev branch will be fast-forward merged into the release branch.  
-The release branch code is delivered to the staging server. End-to-end testing and acceptance test are done by beta testers or QA team.
+According to the description of the Git Flow, the release branch is a short lived one. It may branch off of develop only, and merged into master. In theory, release should be merged back into develop after your release is done, and then be removed. The only thing that you should be merging into release is hotfix. 
 
-If there is something that has to be changed, the team will have to repeat the above process to introduce new changes in development branch.  
-And then, fast-forward merge into release branch again
+If there is something that has to be changed in the release, the team will have to make the change in hotfix branch.  
 
 If end-to-end testing and acceptance test pass, the release branch will be fast-forward merged into the main branch;  
 And at the same time, automatically deployed for production server / ready for users to install.
