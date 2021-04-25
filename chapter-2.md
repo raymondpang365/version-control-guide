@@ -37,7 +37,7 @@ Then, use ```git commit -m "useful message"``` to commit all staged files.
 ### 2.3.2) Keeping local code up to date
 
 
-After commiting the code and before pushin changes,  
+After commiting the code but before pushin changes,  
 types the following commands:  
 ___
 1. Checkout dev branch:  
@@ -50,7 +50,11 @@ ___
 ```git merge dev```.  
 ___
 
-This is very important. Otherwise, when somebody pushed new commit to the remote repository, the local repo would not be in sync with the remote repo. If new changes are made in working directory without keeping it updated first, conflicts easily occur.
+These steps will included all the most updated codes in the team to your personal branch.  
+After pulling, there would be some merge conflicts.  
+This is normal. Do not panic.  
+Go to section **"1.3.5) Handling Merge Conflict"** to see how to resolve Merge Conflict.  
+
 ___
 **Advanced section:**
   
@@ -65,11 +69,6 @@ ___
 However, remember to **```git commit``` or ```git stash```** your code before pulling, otherwise all your local changes will be lost!
 (To learn about git stash, go to advanced guide 2.1.2)*
 ___
-After pulling, there would be some merge conflicts.
-This is normal. Do not panic.
-Go to section **"1.3.5) Handling Merge Conflict"** to see how to resolve Merge Conflect
-
-( To learn about an alternative strategy, see section 2.1 in the advanced guide )
 
 ### 2.3.3) Pushing changes 
 
