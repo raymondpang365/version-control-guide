@@ -1,6 +1,6 @@
-# Chatper 2 - Advanced Guide 
+# Chatper 3 - Advanced Trick and Strategy
 
-## 2.1) Using git stash in merging (to be confirmed)  
+## 3.1) Using git stash in merging (to be confirmed)  
 
 Stash your local changes:  
 
@@ -19,7 +19,7 @@ git push
 ```  
   
 
-## 2.2) CI / CD Automation Tool
+## 3.2) CI / CD Automation Tool
 1. Set a Github action prehook that will automatically do linting, unit testing, integration testing and test if it can build in local/remote environment. They pull request can be uploaded only if everything pass.   
 2. On the development branch, integration testing can be done daily with a cron job.
 3. Optimally, there should be a continuous integration tool to automate, such as rultor.com
