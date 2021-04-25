@@ -33,7 +33,7 @@ Before commiting the code, you have to run and make sure you pass all the unit t
 
 ❗**3 Things Never to do**   
 🛑1. **Never** directly ```git push``` directly to Master, Release or Develop branch.  
-🛑2. **Never** edit, add, remove any files directly in Master, Release or Develop branch in web editor.  
+🛑2. **Never use web edtior** to edit, add, remove any files directly in Master, Release or Develop branch
 🛑3. **Never** use ``--force`` or ```-F``` argument in any scenarios.  
 (Seek helps from your teammates if you are stuck. **NEVER** try to use ```--force```). 
 
@@ -42,7 +42,7 @@ ___
 ❗❗❗Doing **any of the above** can cause at least loss in productivity. ❗❗❗  
 at most critical software error in real live products,    
 which means:   
-**FAILING** the whole project, whole **COMPANY** and your whole **CAREER**,  
+**FAILING** the whole project, whole **COMPANY** and your whole **CAREER** ,  
 ❗❗❗**YOU MAY HAVE TO BEAR LEGAL RESPONSIBILITY of the COMPANY LOSS in regards to your actions**❗❗❗  
 
 ___
@@ -126,6 +126,9 @@ Get back to your terminal, we will resolve it in the terminal instead of web edi
 
 Repeat Step 3 to to resolve Merge Conflict.  
 Just repeat Step 3-6 until you can finally make a pull request without merge conflicts.
+
+After the pull request is approved, announce to your team with your communication tools (such as slack or whatsapp)
+  
 
 ## 2.4) Delivery, Deploy and Release
 
