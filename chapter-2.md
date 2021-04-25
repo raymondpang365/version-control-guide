@@ -53,7 +53,7 @@ ___
 These steps will included all the most updated codes in the team to your personal branch.  
 After pulling, there would be some merge conflicts.  
 This is normal. Do not panic.  
-Go to section **"1.3.5) Handling Merge Conflict"** to see how to resolve Merge Conflict.  
+Go to section **"2.3.6) Handling Merge Conflict"** to see how to resolve Merge Conflict.  
 
 ___
 **Advanced section:**
@@ -103,7 +103,7 @@ You should not create a pull request whenever it cannot automatically merge.
 So, cancel and exit the merging action page, so you still do not create the pull request yet.  
 Get back to your terminal, we will resolve it in the terminal instead of web editor.  
 
-Go to the next section *"1.3-E) Handling Merge Conflict"* to see how to resolve Merge Conflect
+Go to the next section *"2.3.6) Handling Merge Conflict"* to see how to resolve Merge Conflect
 
 ### 2.3.6) Handling Merge Conflict
 
