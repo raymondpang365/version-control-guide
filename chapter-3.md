@@ -1,4 +1,4 @@
-# Chatper 3 - Advanced Trick and Strategy
+# Chatper 3 - Advanced Trick, Strategy & Discussion
 
 ## 3.1) Using git stash in merging (to be confirmed)  
 
