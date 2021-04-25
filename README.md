@@ -146,7 +146,7 @@ git rebase develop
 ```
 but a word of warning, rebase is best used on local feature branches that haven&#39;t been pushed, see [atlassian.com/git/tutorials/…](https://www.atlassian.com/git/tutorials/merging-vs-rebasing#the-golden-rule-of-rebasing)
 
-## 1.5) Delivery, Deploy and Release
+## 1.4) Delivery, Deploy and Release
 
 According to the description of the Git Flow, the release branch is a short lived one. It may branch off of develop only, and merged into master. In theory, release should be merged back into develop after your release is done, and then be removed. The only thing that you should be merging into release is hotfix. 
 
