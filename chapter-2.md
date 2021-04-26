@@ -63,8 +63,7 @@ ___
 1. Checkout dev branch:  
 ```git checkout dev```  
 2. Pull from remote dev branch to local dev branch  
-(using ```--ff-only``` is optional but recommended to assert there is no diverged merge is happening):  
-```git pull origin dev --ff-only```
+```git pull origin dev```
 3. Checkout personal branch:  
 ```git checkout meow-1```.  
 4. Include changes of dev branch into personal branch:  
