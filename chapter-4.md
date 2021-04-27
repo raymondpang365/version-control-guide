@@ -1,4 +1,4 @@
-# Chatper 4 - Dangerous & Alternative Workflow
+# Chatper 4 - Dangerous Workflow
 
 
 ## 4.1) Make commits locally on DEV branch
