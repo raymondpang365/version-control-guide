@@ -1,11 +1,118 @@
 # Chatper 3 - Advanced Trick, Strategy & Discussion
 
-## 3.1) Using git stash in merging (to be confirmed)  
+## 3.2) Change a Commit Message that Hsn't Been Pushed Yet 
+
+```git commit -m "wrong message"```  
+you have commited a wrong message, what should you do?  
+```git commit -m "new message" --amend```   
+```git push origin meow-1 --fast-forward```  
+
+
+## 3.3) Remove Files from Staging
+
+Image you staged a wrong file, for example, the wrong file is lib.js
+```git add lib.js```   
+You want to remove it, what should you do?  
+
+```git log --oneline```   
+
+It will display your current logs, each line is a commit, for example:  
+```
+85da456 ( HEAD -> XXX) Adding index.html and app.js
+45ca772 ...
+... ...
+... ...
+```
+Find your latest commit, which is ```85a456```, do:  
+```git reset HEAD lib.js```.  
+Now, check your staging area with ```git status```.   
+You would find that lib.js is removed from ```git add``` (staging area).  
+Removing file from staging area is called ```unstaging```.  
+
+## 3.4) Remove Files from Commit Before Pushing
+
+Image you commited a wrong file, what should you do?  
+
+```git log --oneline```   
+
+It will display your current logs, each line is a commit, for example:  
+```
+85da456 ( HEAD -> XXX) Adding index.html and app.js
+45ca772 ...
+... ...
+... ...
+```
+Find your latest commit, which is ```85a456```, do:  
+```git reset HEAD~1```
+Now, your commit is rollbacked to when you have not commited yet.  
+You will find all the commited files are back to staging area,  
+
+
+
+## 3.5) Remove Files from Commit Before Pushing
+
+Image you commited a wrong file, what should you do?  
+
+```git log --oneline```   
+
+It will display your current logs, each line is a commit, for example:  
+```
+85da456 ( HEAD -> XXX) Adding index.html and app.js
+45ca772 ...
+... ...
+... ...
+```
+Find your latest commit, which is ```85a456```, do:  
+```git reset HEAD~1```
+Now, your commit is rollbacked to when you have not commited yet.  
+You will find all the commited files are back to staging area
+
+
+## 3.6) Difference between git reset ```--hard```, ```--mixed``` and ```--soft```
+
+**SOFT:  **.=  
+1) Undo commit, moving files from commit back to staging area.  
+**MIXED: **   
+1) Undo commit
+2) Also unstages the files from staging area.  
+HARD: 
+**HARD: **  
+1) Undo commit
+2) Also unstages the files from staging area. 
+3) Also removes local changes in working directory 
+
+
+## 3.7) Undo a commit that has already been pushed
+
+Do not use ```git reset``` because others may alrady have pull your commit.  
+So, it is pointless to rewrite history.   
+
+instead:   
+
+```git revert```
+
+```git log --oneline``` and check the hash of the
+commit that you want to revert.   
+if you want to revert ```A1B27D```
+
+Use ```git revert A1B27D```.
+
+Different from ```git reset```, this does not remove the commit.
+
+Instead, it just creates a new commit on top that reverts the difference
+
+
+
+
+## 3.2) Change a Commit Message that Hsn't Been Pushed Yet 
 
 Stash your local changes:  
 
-```git stash```      
-Update the branch to the latest code  
+```git commit -m "new message" --amend```   
+```git push origin meow-1 --fast-forward``
+
+
+## 3.11) git Update the branch to the latest code  
 
 ```git pull```    
 Merge your local changes into the latest code:  
