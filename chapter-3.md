@@ -93,8 +93,6 @@ So, it is pointless to rewrite history.
 
 instead:   
 
-```git revert```
-
 ```git log --oneline``` and check the hash of the
 commit that you want to revert.   
 if you want to revert ```A1B27D```
@@ -106,17 +104,29 @@ Different from ```git reset```, this does not remove the commit.
 Instead, it just creates a new commit on top that reverts the difference
 
 
+## 3.8) Copy a commit to another branch
+
+For example, we made a wrong commit in ```master``` branch and we mean to ```commit``` it in meow-1 branch
+
+```git log --oneline``` and check the hash of the  
+commit that you want to move.   
+if you want to move ```A1B27D```    
+```git checkout meow-1```
+```git cherry-pick A1B27D```
 
 
-## 3.2) Change a Commit Message that Hsn't Been Pushed Yet 
+## 3.9) Move the change even if worked on and commited on the wrong branch
 
-Stash your local changes:  
+For example, we worked on the wrong branch made a wrong commit in ```master``` branch.
+And, we want to move all works and ```commit``` it in meow-1 branch instead
+First, copy the commit with the method mentioned in section 3.8
 
-```git commit -m "new message" --amend```   
-```git push origin meow-1 --fast-forward``
+Next, go back to master branch
+```git checkout master```
+```git reset --HARD~1```
 
 
-## 3.11) git Update the branch to the latest code  
+## 3.10) git Update the branch to the latest code  
 
 ```git pull```    
 Merge your local changes into the latest code:  
@@ -128,6 +138,18 @@ git add
 git commit
 git push
 ```  
+## 3.11) Explore old commit with detach HEAD, then recover
+Let's say you are now in ```meow-1``` branch...   
+You can look into old commits with hash ```C1B6D2```   
+with ```git checkout C1B6D2```.  
+
+But when you change anything, you will lose the change because you have detached HEAD.   
+To working on old commits...    
+use ```git branch -b new-branch```, now you can work on the commit in history with a new branch.  
+When you want to get back to the current branch, simply ```git branch meow-1```.  
+
+
+
 ## 3.2) If commits are made locally on DEV branch
 
 Use```git pull origin dev --rebase --preserve-merges```. 
