@@ -51,6 +51,10 @@ You will find all the commited files are back to staging area,
 
 ## 3.5) Remove Files from Commit Before Pushing
 
+The following tip is only suitable if you have NOT pushed the commit.
+if you have pushed the commit, do not use ```reset```, use ```revert``` instead,  
+which is mentioned in section 3.7.
+
 Image you commited a wrong file, what should you do?  
 
 ```git log --oneline```   
