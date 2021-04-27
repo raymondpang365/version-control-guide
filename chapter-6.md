@@ -1,7 +1,7 @@
-# Chatper 4 - Dangerous Workflow
+# Chatper 5 - Dangerous Workflow
 
 
-## 4.1) Make commits locally on DEV branch
+## 5.1) Make commits locally on DEV branch
 
 Use```git pull origin dev --rebase --preserve-merges```. 
 ``` --rebase --preserve-merges``` makes sure new local commits that hasn&#39;t been uploaded will be combined on top of the master branch codes,   
